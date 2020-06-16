@@ -1,0 +1,14 @@
+* 对话生成 张朔学长 EMNLP2019
+之前的工作：
+使用了结构化的知识图谱
+使用了非结构化的信息
+这篇工作：
+将非结构化信息与结构化信息进行结合
+[[file:./images/20200517193548.png][Capture-20200517193548.png]]
+
+基于强化学习的框架进行特征选择
+state：
+Observation：
+Actions：
+Transition：
+Rewards：[[file:./images/20200517193955.png][Capture-20200517193955.png]]

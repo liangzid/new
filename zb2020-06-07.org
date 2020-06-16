@@ -1,0 +1,28 @@
+* 李润东 mutal information with LSH IJCAI2020
+
+互信息:衡量随机变量之间相互依赖程度的一种度量.
+
+I(X;Y)=E_{p(x,y)}[log\frac{p(x|y)}{p(x)}]
+问题:
+- 直接计算复杂;
+- 一般仅仅计算一个下界
+** 一些基本工作
+*** NCE noise constrastive estimation(ICML)
+[[file:./images/20200607194216.png][Capture-20200607194216.png]]
+如图所示,最大化embedding与相同输入的互信息结果,最小化embedding与其他输入的结果.
+
+p=1-(1-\mathcal{M}(\theta_{yi}*x)^K)^L
+
+
+
+** 使用LSH
+
+* 几何GCN
++ 过去的方法:通过节点传播的方法,进行GNN的构建.
++ 具有一个不变性的部位:比如加和平均.
+
+问题: 不同节点的连接特性不一样,因而丢失掉了节点的结构信息.
+问题: 无法学习长程信息,在图的结构里.
+
+
+网络几何学:

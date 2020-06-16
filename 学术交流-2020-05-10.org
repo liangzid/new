@@ -1,0 +1,33 @@
+* 无监督embedding 许诺学长
+互信息最大化原子Mutual Information Maximization
+[[file:./images/20200510193334.png][Capture-20200510193334.png]]
+
+related works：
+graphSGAE：其损失函数的定义，是要求节点之间的隐向量的相似度大于节点和破坏节点之间的。
+额外的改进：试图去把embedding与输入和边的关联的互信息加入进去
+[[file:./images/20200510193940.png]
+Capture-20200510193940.png]]
+
+
+
+表示的分层性
+[[file:./images/20200510194553.png][Capture-20200510194553.png]]
+
+* ？？NAS
+在super-net的基础上，把每次进行一次采样变成多次抽样，之后把其中一部分给拒掉。另一部分用来进行更新。
+
+[[file:./images/20200510201701.png][Capture-20200510201701.png]]
+
+
+
+
+老虎机问题
+
+最近，MIT关于mobile phone
+
+在场景上做创新，而非在算法上做创新
+
+
+* 分布式算法，寻找高相似度的Vector
+
+

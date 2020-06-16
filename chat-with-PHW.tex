@@ -1,0 +1,78 @@
+% Created 2020-04-20 周一 16:46
+% Intended LaTeX compiler: pdflatex
+\documentclass{article}
+                 \usepackage{graphicx}
+                 \usepackage{xcolor}
+                 \usepackage{xeCJK}
+                 \usepackage{fixltx2e}
+                 \usepackage{longtable}
+                 \usepackage{float}        
+                 \usepackage{tikz}         
+                 \usepackage{wrapfig}      
+                 \usepackage{latexsym,amssymb,amsmath}
+                 \usepackage{textcomp}
+                 \usepackage{listings}     
+                \usepackage{marvosym}     
+                \usepackage{textcomp}     
+                \usepackage{latexsym}     
+                \usepackage{natbib}       
+                \usepackage{geometry}     
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+
+
+\section{评价指标}
+\label{sec:org4b7e001}
+HR和NDCG都是在推荐系统里常用的评价指标。
+
+参考文献：\url{https://blog.csdn.net/qq\_40006058/article/details/89432773}
+\subsection{HR hit Ratio}
+\label{sec:org2e1984a}
+HR 是在top k推荐中常见的衡量 -召回率-的指标。其公式为：
+
+\(HR@K=\frac{NumOfHits@K}/GT\)
+其中, GT是指的groundTruth下的元素个数.而NumOfHits是指在k个推荐中找到的正确的元素个数.
+
+> 例如:三个用户在测试集中的商品个数分别是10，12，8，模型得到的top-10推荐列表中，分别有6个，5个，4个在测试集中，那么此时HR的值是
+(6+5+4)/(10+12+8) = 0.5。
+
+\subsection{NDCG,Normalized Discounted Cummulative Gain}
+\label{sec:orge36fe6e}
+\subsubsection{CG}
+\label{sec:org8cb0110}
+对于一个topK的推荐系统,CG是将每个推荐的相关性进行评分,之后,将评分结果进行累加,即:
+\(CG_k=\sum\limits_{i=1}^{k}{rel_i}\)
+其中,rel\(_{\text{i是指第i个推荐的相关程度}}\).
+\subsubsection{DCG}
+\label{sec:orgfd58fd3}
+
+CG没有考虑同一个推荐列表中每个推荐之间的排序问题,而DCG就是对其的补充.
+\$DCG\(_{\text{k}}\)=\(\sum\)\limits\(_{\text{i=1}}^{\text{k}}\)\{\frac\{2\(^{\text{rel}_{\text{i}}}\)-1\}\{log\(_{\text{2}}\)(i+1)\}\} \$
+可以看出,相关性大的,如果排在前面,那么其DCG的值就会越高.
+
+\subsubsection{NDCG}
+\label{sec:orgb69de4a}
+\begin{enumerate}
+\item IDCG
+\label{sec:orgf7d6730}
+IDCG表示用户返回的最好推荐结果.按照道理讲,\(DCG \in (0,IDCG]\)
+\item NDCG
+\label{sec:org515519b}
+用户u的NDCG是通过DCG和该用户的IDCG二者共同定义的,即
+\(NDCG_u@k=\frac{DCG_u@k}{IDCG_u}\)
+
+对于多个用户,其平均的NDCG可以被定义为:
+\(NDCG@k=\sum_{u \in U}{\frac{NDCG_u@k}{IDCG_u}}\)
+\end{enumerate}
+\end{document}

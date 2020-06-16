@@ -1,0 +1,61 @@
+% Created 2020-05-28 周四 17:02
+% Intended LaTeX compiler: xelatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+今天下午身体不适，不爽。
+
+\section{贾鹏学长  可达性检测}
+\label{sec:org92fa8c0}
+\subsection{background}
+\label{sec:org8b71d02}
+针对图数据
+
+Label-Constrained Reachability Query
+
+查询两个节点之间是否可以通过某些类别的边进行可达。在这里面，边的类别是需要进行考虑的。
+
+\subsection{related works}
+\label{sec:org3e96426}
+1.BFS/DFS：很耗时间。精确查找
+2.Index（通过对节点建立索引的方法）。
+\href{./images/20200503193839.png}{Capture-20200503193839.png}
+图中的就是索引。LI就是list。
+
+\section{兰林学长 半监督学习图分类 ICLR2020}
+\label{sec:orga2210c6}
+\subsection{motivation}
+\label{sec:org6f80107}
+图卷积的方法1）在做半监督节点分类时过于普通（学习表示，之后分类）
+
+2）相邻的节点未必有相同的label
+
+\subsection{idea}
+\label{sec:orgff32062}
+思索查询节点和推理节点的相似性
+\href{./images/20200503202612.png}{Capture-20200503202612.png}
+\end{document}
