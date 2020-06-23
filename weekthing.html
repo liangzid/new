@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-06-21 周日 21:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org56ff68b">1. time series similarity measures</a>
+<ul>
+<li><a href="#org98bb637">1.1. metric</a>
+<ul>
+<li><a href="#orgb68c591">1.1.1. euclidean distance</a></li>
+<li><a href="#orgfad9deb">1.1.2. DTW (Dynamic Time Warping)</a></li>
+</ul>
+</li>
+<li><a href="#orgccfa2a7">1.2. search method</a>
+<ul>
+<li><a href="#org7a254b8">1.2.1. UCR Suite</a></li>
+<li><a href="#org62fce85">1.2.2. SSH 近似序列搜索</a></li>
+<li><a href="#orgda92218">1.2.3. clustering subsequences</a></li>
+<li><a href="#orgbf66bfc">1.2.4. 一点点疑问</a></li>
+<li><a href="#org1bc50a2">1.2.5. Use Matrix Profile</a></li>
+<li><a href="#org493fceb">1.2.6. progressive similarity search</a></li>
+<li><a href="#orgc071138">1.2.7. 对带高频噪声的时间序列的处理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4e5267b">2. self-similarity ICML2019</a>
+<ul>
+<li><a href="#org80a9eb7">2.1. COO Arrangement</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56ff68b" class="outline-2">
+<h2 id="org56ff68b"><span class="section-number-2">1</span> time series similarity measures</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
+</p>
+</div>
+<div id="outline-container-org98bb637" class="outline-3">
+<h3 id="org98bb637"><span class="section-number-3">1.1</span> metric</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb68c591" class="outline-4">
+<h4 id="orgb68c591"><span class="section-number-4">1.1.1</span> euclidean distance</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+lve.
+不好使.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfad9deb" class="outline-4">
+<h4 id="orgfad9deb"><span class="section-number-4">1.1.2</span> DTW (Dynamic Time Warping)</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<div class="figure">
+<p><img src="images/20200621194637.png" alt="20200621194637.png" />
+</p>
+</div>
+
+<p>
+为了弥补相位差等别的一些原因，通过一定的warp方式进行soft，也就是，
+建立两个时间序列的一个矩阵，即计算该矩阵中每个相位移动下的欧式距离,从而找到一条"最短通路",而后,在这种最短通路下进行欧氏距离的聚合.当然,这种方法的计算复杂度是特别高的.
+</p>
+
+<p>
+UCR Suite
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgccfa2a7" class="outline-3">
+<h3 id="orgccfa2a7"><span class="section-number-3">1.2</span> search method</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org7a254b8" class="outline-4">
+<h4 id="org7a254b8"><span class="section-number-4">1.2.1</span> UCR Suite</h4>
+<div class="outline-text-4" id="text-1-2-1">
+
+<div class="figure">
+<p><img src="images/20200621195250.png" alt="20200621195250.png" />
+</p>
+</div>
+
+<p>
+phw:使用神经网络去进行时间序列的相似度计算，这种思路是否可行呢？
+</p>
+
+<p>
+sfy：时间序列的相似度度量更加看重于效率。使用神经网络也可以。
+</p>
+
+<p>
+phw：传统的排序算法（数据结构里面的一些算法），也使用神经网络进行处理，变化成可微分的一种操作。这样的原因是：排序等基本计算是整个大系统的一个小部分，对于端到端的训练具有很大的意义，因此具有用神经网络替代传统的方式的意义。如果神经网络需要一个对“时间序列相似度”的处理，而对于一个端到端的系统中的这样一个子环节，其可微分是具有一定意义的。从这个角度来看，能否开展“时间序列相似度度量”的神经网络化。
+</p>
+
+<p>
+jzz：听不太清。
+</p>
+
+<p>
+sfy：只考虑时间序列，没有考虑“语音识别”这种特殊的语境。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62fce85" class="outline-4">
+<h4 id="org62fce85"><span class="section-number-4">1.2.2</span> SSH 近似序列搜索</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+<a href="images/20200621200911.png ">images/20200621200911.png </a>
+</p>
+<ol class="org-ol">
+<li>sketching：实数-》+1，-1序列</li>
+<li>shingle：-1，1序列片段-》集合</li>
+<li>hash：集合与集合，使用LSH方法计算其相似度</li>
+</ol>
+
+
+
+<div class="figure">
+<p><img src="images/20200621201301.png" alt="20200621201301.png" />
+</p>
+</div>
+
+<p>
+zym:为什么要用1.与2.变换成集合,而不是直接对时间序列进行(量化等)处理之后直接LSH呢?
+</p>
+
+<p>
+sfy:也有这种思路,但是没有这么做的.
+</p>
+
+
+<div class="figure">
+<p><img src="images/20200621203109.png" alt="20200621203109.png" />
+</p>
+</div>
+
+<p>
+我的想法:不能,因为如果直接映射,那么就丢失了时间序列最重要的序列信息.但是上图这种将一段系列变成一块,或许是可行的?
+</p>
+
+<p>
+针对SSH对超参数敏感的问题:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgda92218" class="outline-4">
+<h4 id="orgda92218"><span class="section-number-4">1.2.3</span> clustering subsequences</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+没有特别听明白,天呢.
+</p>
+
+
+<div class="figure">
+<p><img src="images/20200621202838.png" alt="20200621202838.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgbf66bfc" class="outline-4">
+<h4 id="orgbf66bfc"><span class="section-number-4">1.2.4</span> 一点点疑问</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+究竟啥是random walk啊!
+shapelet究竟是什么东西?
+</p>
+</div>
+</div>
+<div id="outline-container-org1bc50a2" class="outline-4">
+<h4 id="org1bc50a2"><span class="section-number-4">1.2.5</span> Use Matrix Profile</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+对序列切割成若干个子序列,然后计算子序列之间彼此的欧氏距离
+</p>
+</div>
+</div>
+<div id="outline-container-org493fceb" class="outline-4">
+<h4 id="org493fceb"><span class="section-number-4">1.2.6</span> progressive similarity search</h4>
+<div class="outline-text-4" id="text-1-2-6">
+
+<div class="figure">
+<p><img src="images/20200621204521.png" alt="20200621204521.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc071138" class="outline-4">
+<h4 id="orgc071138"><span class="section-number-4">1.2.7</span> 对带高频噪声的时间序列的处理</h4>
+<div class="outline-text-4" id="text-1-2-7">
+<p>
+小波变换&rarr; 指纹&rarr; 计算
+</p>
+
+
+<div class="figure">
+<p><img src="images/20200621204913.png" alt="20200621204913.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e5267b" class="outline-2">
+<h2 id="org4e5267b"><span class="section-number-2">2</span> self-similarity ICML2019</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
+如何为SGD挑选合适的数据点,使得模型尽快收敛.
+</p>
+</div>
+<div id="outline-container-org80a9eb7" class="outline-3">
+<h3 id="org80a9eb7"><span class="section-number-3">2.1</span> COO Arrangement</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<div class="figure">
+<p><img src="images/20200621210726.png" alt="20200621210726.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="images/20200621210813.png" alt="20200621210813.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="images/20200621211132.png" alt="20200621211132.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2020-06-21 周日 21:40</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-06-16 周二 18:56 -->
+<!-- 2020-06-18 周四 08:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>org基本使用指南</title>
@@ -256,136 +256,136 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org17c8996">1. <span class="done DONE">DONE</span> introduction: a welcome of org mode</a>
+<li><a href="#org15ddf96">1. <span class="done DONE">DONE</span> introduction: a welcome of org mode</a>
 <ul>
-<li><a href="#org7763785">1.1. 激活</a></li>
+<li><a href="#orgd5e7da7">1.1. 激活</a></li>
 </ul>
 </li>
-<li><a href="#org7b0c546">2. <span class="done DONE">DONE</span> document structure 文档结构</a>
+<li><a href="#org5cde623">2. <span class="done DONE">DONE</span> document structure 文档结构</a>
 <ul>
-<li><a href="#org75c9879">2.1. headlines</a></li>
-<li><a href="#org381ce2c">2.2. 在可见度上的遮盖与打开 visibility cycling</a></li>
-<li><a href="#orgb7a4669">2.3. 在headline之间的跳动</a></li>
-<li><a href="#orgdb4df3e">2.4. 结构编辑 structure editing</a></li>
-<li><a href="#org2fe9db1">2.5. sparse trees</a></li>
-<li><a href="#orge36a770">2.6. plain list 简单的列表</a></li>
+<li><a href="#org7a85c49">2.1. headlines</a></li>
+<li><a href="#org846f139">2.2. 在可见度上的遮盖与打开 visibility cycling</a></li>
+<li><a href="#orgd88ba6c">2.3. 在headline之间的跳动</a></li>
+<li><a href="#orgac078cd">2.4. 结构编辑 structure editing</a></li>
+<li><a href="#orgc1eb69b">2.5. sparse trees</a></li>
+<li><a href="#org9bc3552">2.6. plain list 简单的列表</a></li>
 </ul>
 </li>
-<li><a href="#org22d83e6">3. <span class="done DONE">DONE</span> table 表格的使用</a>
+<li><a href="#org22e367c">3. <span class="done DONE">DONE</span> table 表格的使用</a>
 <ul>
-<li><a href="#orgd4a6db0">3.1. 使用C-c | 形成一个新的表格</a></li>
-<li><a href="#org36b33e0">3.2. cell基本变换</a></li>
-<li><a href="#org7dbebda">3.3. <span class="done DONE">DONE</span> 行与列的变化</a></li>
+<li><a href="#org2db005c">3.1. 使用C-c | 形成一个新的表格</a></li>
+<li><a href="#org2e799c1">3.2. cell基本变换</a></li>
+<li><a href="#orge425e5d">3.3. <span class="done DONE">DONE</span> 行与列的变化</a></li>
 </ul>
 </li>
-<li><a href="#org27aaf91">4. <span class="done DONE">DONE</span> hyperlinks 超链接</a>
+<li><a href="#org84a8344">4. <span class="done DONE">DONE</span> hyperlinks 超链接</a>
 <ul>
-<li><a href="#org2b77235">4.1. 内部链接</a></li>
-<li><a href="#orgf8b21d6">4.2. 外部链接</a></li>
-<li><a href="#org0b9c8f5">4.3. handling links, 处理链接</a></li>
+<li><a href="#orga3ce561">4.1. 内部链接</a></li>
+<li><a href="#org6d8a1e4">4.2. 外部链接</a></li>
+<li><a href="#orgcfa92ec">4.3. handling links, 处理链接</a></li>
 </ul>
 </li>
-<li><a href="#org58ef04f">5. <span class="done DONE">DONE</span> todo iteems  待办项目</a>
+<li><a href="#orgef56bef">5. <span class="done DONE">DONE</span> todo iteems  待办项目</a>
 <ul>
-<li><a href="#org942a1bf">5.1. 有关todo的基本操作</a></li>
-<li><a href="#org3562fa5">5.2. <span class="done DONE">DONE</span> muti-state workflow  多态工作流</a></li>
-<li><a href="#orgbc34312">5.3. Progress Logging 进展记录</a>
+<li><a href="#org075857a">5.1. 有关todo的基本操作</a></li>
+<li><a href="#org28a2cae">5.2. <span class="done DONE">DONE</span> muti-state workflow  多态工作流</a></li>
+<li><a href="#org7e89ecf">5.3. Progress Logging 进展记录</a>
 <ul>
-<li><a href="#org0960024">5.3.1. <span class="todo TODO">TODO</span> 阅读clocking working time</a></li>
-<li><a href="#orged91a1b">5.3.2. closing items 关闭项目</a></li>
-<li><a href="#orgf046890">5.3.3. tracking todo state changes</a></li>
+<li><a href="#org8a2ad6d">5.3.1. <span class="todo TODO">TODO</span> 阅读clocking working time</a></li>
+<li><a href="#orga61c9f5">5.3.2. closing items 关闭项目</a></li>
+<li><a href="#orgb8f08d9">5.3.3. tracking todo state changes</a></li>
 </ul>
 </li>
-<li><a href="#orge582243">5.4. Priorities 优先级</a></li>
-<li><a href="#orgd7bb594">5.5. break tasks down into subtasks 将任务分解为子任务</a></li>
-<li><a href="#org0f51d6f">5.6. checkboxes 复选框</a></li>
+<li><a href="#org6ccd255">5.4. Priorities 优先级</a></li>
+<li><a href="#org91e5e42">5.5. break tasks down into subtasks 将任务分解为子任务</a></li>
+<li><a href="#org8817660">5.6. checkboxes 复选框</a></li>
 </ul>
 </li>
-<li><a href="#org0d5c2d5">6. <span class="done DONE">DONE</span> Tags 标签</a>
+<li><a href="#org6f0de92">6. <span class="done DONE">DONE</span> Tags 标签</a>
 <ul>
-<li><a href="#org91a3707">6.1. tag inheritance 标签层级</a></li>
-<li><a href="#org7ff4c40">6.2. 设置标签&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span></span></a></li>
-<li><a href="#org6a928db">6.3. 标签组</a></li>
-<li><a href="#orgd26be2a">6.4. 标签的搜索</a></li>
+<li><a href="#orgd867044">6.1. tag inheritance 标签层级</a></li>
+<li><a href="#orga74ffa6">6.2. 设置标签&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span></span></a></li>
+<li><a href="#orgc83caf6">6.3. 标签组</a></li>
+<li><a href="#org6e55495">6.4. 标签的搜索</a></li>
 </ul>
 </li>
-<li><a href="#org56d50a3">7. <span class="done DONE">DONE</span> Properties</a></li>
-<li><a href="#org6aa70ed">8. <span class="done DONE">DONE</span> dates and times</a>
+<li><a href="#org55b6f95">7. <span class="done DONE">DONE</span> Properties</a></li>
+<li><a href="#orgc5e7201">8. <span class="done DONE">DONE</span> dates and times</a>
 <ul>
-<li><a href="#org2cb60ac">8.1. timestamps 时间戳</a>
+<li><a href="#orgc4e0b53">8.1. timestamps 时间戳</a>
 <ul>
-<li><a href="#org654d95c">8.1.1. C-c . 插入时间戳</a></li>
-<li><a href="#orgc3da9b3">8.1.2. C-c ! 插入非活动类型时间戳</a></li>
-<li><a href="#org0012a11">8.1.3. S-方向键</a></li>
+<li><a href="#org489c25b">8.1.1. C-c . 插入时间戳</a></li>
+<li><a href="#org9878b59">8.1.2. C-c ! 插入非活动类型时间戳</a></li>
+<li><a href="#org7ce19f8">8.1.3. S-方向键</a></li>
 </ul>
 </li>
-<li><a href="#org1d2a316">8.2. deadline and scheduling 截止日期与时间表</a>
+<li><a href="#org3755127">8.2. deadline and scheduling 截止日期与时间表</a>
 <ul>
-<li><a href="#orgf4a0134">8.2.1. C-c C-d</a></li>
-<li><a href="#org1963058">8.2.2. C-c C-s</a></li>
+<li><a href="#orgf480dcd">8.2.1. C-c C-d</a></li>
+<li><a href="#org25dc018">8.2.2. C-c C-s</a></li>
 </ul>
 </li>
-<li><a href="#org9cf43be">8.3. clocking work time 记录在特定项目上消耗的时间</a></li>
+<li><a href="#orged2b77c">8.3. clocking work time 记录在特定项目上消耗的时间</a></li>
 </ul>
 </li>
-<li><a href="#org613af65">9. <span class="todo INPROGRESS">INPROGRESS</span> capture, refile, archive</a>
+<li><a href="#orga0cfe9d">9. <span class="todo INPROGRESS">INPROGRESS</span> capture, refile, archive</a>
 <ul>
-<li><a href="#orgb96e729">9.1. capture</a>
+<li><a href="#org198d507">9.1. capture</a>
 <ul>
-<li><a href="#org6ebc596">9.1.1. setting up capture 设置capture</a></li>
-<li><a href="#org077ce1d">9.1.2. using capture 使用capture</a></li>
-<li><a href="#org7d43653">9.1.3. <span class="done DONE">DONE</span> capture templates</a></li>
+<li><a href="#org5f0a575">9.1.1. setting up capture 设置capture</a></li>
+<li><a href="#orgcb15138">9.1.2. using capture 使用capture</a></li>
+<li><a href="#orgbb14706">9.1.3. <span class="done DONE">DONE</span> capture templates</a></li>
 </ul>
 </li>
-<li><a href="#orga7b006e">9.2. refile and copy 文件重归档与复制</a></li>
+<li><a href="#org1a7a664">9.2. refile and copy 文件重归档与复制</a></li>
 </ul>
 </li>
-<li><a href="#org3c36a2e">10. <span class="todo INPROGRESS">INPROGRESS</span> agenda views</a>
+<li><a href="#org175e395">10. <span class="todo INPROGRESS">INPROGRESS</span> agenda views</a>
 <ul>
-<li><a href="#orgd9f2719">10.1. agenda files</a></li>
-<li><a href="#org4730928">10.2. The Agenda Dispatcher 日程调度分配器</a></li>
-<li><a href="#org6131fcb">10.3. The Weekly /Daily  Agenda</a></li>
-<li><a href="#org3e85907">10.4. the global todo list 全局todo列表</a></li>
-<li><a href="#org52a5e77">10.5. Matching Tags and Properties 匹配标签和属性</a></li>
+<li><a href="#orgfefd845">10.1. agenda files</a></li>
+<li><a href="#orga1c7c56">10.2. The Agenda Dispatcher 日程调度分配器</a></li>
+<li><a href="#org5ebc154">10.3. The Weekly /Daily  Agenda</a></li>
+<li><a href="#org59e4298">10.4. the global todo list 全局todo列表</a></li>
+<li><a href="#org3f981a2">10.5. Matching Tags and Properties 匹配标签和属性</a></li>
 </ul>
 </li>
-<li><a href="#orge72f83c">11. <span class="done DONE">DONE</span> markup for rich contents</a>
+<li><a href="#orgba57b37">11. <span class="done DONE">DONE</span> markup for rich contents</a>
 <ul>
-<li><a href="#orgab49f83">11.1. paragraphs 段落</a></li>
-<li><a href="#org49d636b">11.2. Emphasis and Monospace 强调与等宽字体</a></li>
-<li><a href="#orgaedc0bc">11.3. embedded latex</a></li>
-<li><a href="#org1ecd375">11.4. literal examples 一些例子</a></li>
-<li><a href="#orgcb4f625">11.5. Images 插入图片的问题</a></li>
-<li><a href="#orgdd904f4">11.6. creating footnotes 插入脚注</a></li>
+<li><a href="#orgfc3637f">11.1. paragraphs 段落</a></li>
+<li><a href="#orgef1bae6">11.2. Emphasis and Monospace 强调与等宽字体</a></li>
+<li><a href="#orgbd241d5">11.3. embedded latex</a></li>
+<li><a href="#org4b97f79">11.4. literal examples 一些例子</a></li>
+<li><a href="#orgc373d46">11.5. Images 插入图片的问题</a></li>
+<li><a href="#org5815699">11.6. creating footnotes 插入脚注</a></li>
 </ul>
 </li>
-<li><a href="#org78988c7">12. <span class="done DONE">DONE</span> exporting</a>
+<li><a href="#orgd92cea4">12. <span class="done DONE">DONE</span> exporting</a>
 <ul>
-<li><a href="#orgd360587">12.1. 导出时需要的一些特殊信息</a></li>
-<li><a href="#orgf7c7fab">12.2. table of contents 内容目录</a></li>
-<li><a href="#orgd5e01f2">12.3. include files 导入其他文件</a></li>
-<li><a href="#org9893982">12.4. comment lines 注释行</a></li>
-<li><a href="#org953a82c">12.5. 正文开始:导出成不同格式的文件</a>
+<li><a href="#orgf7808a1">12.1. 导出时需要的一些特殊信息</a></li>
+<li><a href="#orgc9802ee">12.2. table of contents 内容目录</a></li>
+<li><a href="#orgeeb4a90">12.3. include files 导入其他文件</a></li>
+<li><a href="#org014a590">12.4. comment lines 注释行</a></li>
+<li><a href="#org7774515">12.5. 正文开始:导出成不同格式的文件</a>
 <ul>
-<li><a href="#orgfa4bd3c">12.5.1. ASCII UTF-8</a></li>
-<li><a href="#orgf2b8e89">12.5.2. HTML</a></li>
-<li><a href="#orgca2208c">12.5.3. latex export</a></li>
-<li><a href="#orgc914a46">12.5.4. iCalendar export</a></li>
+<li><a href="#org2c748ba">12.5.1. ASCII UTF-8</a></li>
+<li><a href="#orgad4f10c">12.5.2. HTML</a></li>
+<li><a href="#orgb5099b5">12.5.3. latex export</a></li>
+<li><a href="#orgbc04215">12.5.4. iCalendar export</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf4f41fb">13. <span class="done DONE">DONE</span> publishing</a></li>
-<li><a href="#org659a6ab">14. <span class="todo INPROGRESS">INPROGRESS</span> working with source code 在笔记里插入源码<code>[%]</code></a>
+<li><a href="#orge3fedba">13. <span class="done DONE">DONE</span> publishing</a></li>
+<li><a href="#orgac13169">14. <span class="todo INPROGRESS">INPROGRESS</span> working with source code 在笔记里插入源码<code>[%]</code></a>
 <ul>
-<li><a href="#org9170d56">14.1. <span class="todo TODO">TODO</span> using header arguments</a></li>
-<li><a href="#orgbde6e2e">14.2. <span class="todo TODO">TODO</span> evaluating code blocks</a></li>
-<li><a href="#org8a2ec36">14.3. <span class="todo TODO">TODO</span> results of evaluation</a></li>
-<li><a href="#org9a36453">14.4. <span class="todo TODO">TODO</span> exporting code blocks</a></li>
-<li><a href="#org1730280">14.5. <span class="todo TODO">TODO</span> extracting source code</a></li>
+<li><a href="#orgb716582">14.1. <span class="todo TODO">TODO</span> using header arguments</a></li>
+<li><a href="#org59b4edc">14.2. <span class="todo TODO">TODO</span> evaluating code blocks</a></li>
+<li><a href="#org4eb639d">14.3. <span class="todo TODO">TODO</span> results of evaluation</a></li>
+<li><a href="#orgc938791">14.4. <span class="todo TODO">TODO</span> exporting code blocks</a></li>
+<li><a href="#orgf68f577">14.5. <span class="todo TODO">TODO</span> extracting source code</a></li>
 </ul>
 </li>
-<li><a href="#org0d2258c">15. <span class="todo TODO">TODO</span> miscellaneous</a></li>
+<li><a href="#org889d543">15. <span class="todo TODO">TODO</span> miscellaneous</a></li>
 </ul>
 </div>
 </div>
@@ -394,12 +394,12 @@ for the JavaScript code in this tag.
 这篇笔记里所有的内容都来自于<a href="https://orgmode.org/guide/">orgmode compact guide</a>.
 </p>
 
-<div id="outline-container-org17c8996" class="outline-2">
-<h2 id="org17c8996"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> introduction: a welcome of org mode</h2>
+<div id="outline-container-org15ddf96" class="outline-2">
+<h2 id="org15ddf96"><span class="section-number-2">1</span> <span class="done DONE">DONE</span> introduction: a welcome of org mode</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org7763785" class="outline-3">
-<h3 id="org7763785"><span class="section-number-3">1.1</span> 激活</h3>
+<div id="outline-container-orgd5e7da7" class="outline-3">
+<h3 id="orgd5e7da7"><span class="section-number-3">1.1</span> 激活</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 当你初次使用一个emacs,且你并没有什么配置的时候,如何从零开始配置org呢?首先,尝试将以下代码复制到init.el文件里,当然,也可以是合理的其他位置.这样做的目的是为了激活快捷键.
@@ -412,15 +412,15 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-org7b0c546" class="outline-2">
-<h2 id="org7b0c546"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> document structure 文档结构</h2>
+<div id="outline-container-org5cde623" class="outline-2">
+<h2 id="org5cde623"><span class="section-number-2">2</span> <span class="done DONE">DONE</span> document structure 文档结构</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 文档结构被认为是文档的骨架,也就是一个"书"状的层次结构.
 </p>
 </div>
-<div id="outline-container-org75c9879" class="outline-3">
-<h3 id="org75c9879"><span class="section-number-3">2.1</span> headlines</h3>
+<div id="outline-container-org7a85c49" class="outline-3">
+<h3 id="org7a85c49"><span class="section-number-3">2.1</span> headlines</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 就是一级标题,二级标题等等.一般可以通过以下方式进行表达:
@@ -443,8 +443,8 @@ for the JavaScript code in this tag.
 </p>
 </div>
 </div>
-<div id="outline-container-org381ce2c" class="outline-3">
-<h3 id="org381ce2c"><span class="section-number-3">2.2</span> 在可见度上的遮盖与打开 visibility cycling</h3>
+<div id="outline-container-org846f139" class="outline-3">
+<h3 id="org846f139"><span class="section-number-3">2.2</span> 在可见度上的遮盖与打开 visibility cycling</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 也就是在可见度之间的一种循环.前面有所介绍.
@@ -482,8 +482,8 @@ for the JavaScript code in this tag.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb7a4669" class="outline-3">
-<h3 id="orgb7a4669"><span class="section-number-3">2.3</span> 在headline之间的跳动</h3>
+<div id="outline-container-orgd88ba6c" class="outline-3">
+<h3 id="orgd88ba6c"><span class="section-number-3">2.3</span> 在headline之间的跳动</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 有的时候,是想直接在headline之间进行跳动的.这些过程通常可以经由以下快捷键进行展示.
@@ -496,8 +496,8 @@ C-c C-u backward to higher level headings.?
 </p>
 </div>
 </div>
-<div id="outline-container-orgdb4df3e" class="outline-3">
-<h3 id="orgdb4df3e"><span class="section-number-3">2.4</span> 结构编辑 structure editing</h3>
+<div id="outline-container-orgac078cd" class="outline-3">
+<h3 id="orgac078cd"><span class="section-number-3">2.4</span> 结构编辑 structure editing</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 结构编辑主要存在以下快捷键.
@@ -512,8 +512,8 @@ C-c C-u backward to higher level headings.?
 </ol>
 </div>
 </div>
-<div id="outline-container-org2fe9db1" class="outline-3">
-<h3 id="org2fe9db1"><span class="section-number-3">2.5</span> sparse trees</h3>
+<div id="outline-container-orgc1eb69b" class="outline-3">
+<h3 id="orgc1eb69b"><span class="section-number-3">2.5</span> sparse trees</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
    sparse tree 是一种有侧重地进行"目标选择"的工具.(不太确定,我目前这样理解这一功能)
@@ -526,13 +526,13 @@ C-c C-u backward to higher level headings.?
 </div>
 </div>
 
-<div id="outline-container-orge36a770" class="outline-3">
-<h3 id="orge36a770"><span class="section-number-3">2.6</span> plain list 简单的列表</h3>
+<div id="outline-container-org9bc3552" class="outline-3">
+<h3 id="org9bc3552"><span class="section-number-3">2.6</span> plain list 简单的列表</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 简单的列表可以通过以下标记符号进行快速地创建.
 使用"-" "+" "*" 进行无序号列表的创建,使用"1." "1 "进行有序号列表的创建.使用"::"进行解释.
-下面是一个例子.值得注意的是,这里"::"充当的作用,与latex中\label极为相似.二者都是在给出一个方便于引用的对象.关于如何应用之,可以看<a href="#orgf8b21d6">4.2</a>.
+下面是一个例子.值得注意的是,这里"::"充当的作用,与latex中\label极为相似.二者都是在给出一个方便于引用的对象.关于如何应用之,可以看<a href="#org6d8a1e4">4.2</a>.
 </p>
 
 <div class="org-src-container">
@@ -552,8 +552,8 @@ C-c C-u backward to higher level headings.?
 </div>
 </div>
 </div>
-<div id="outline-container-org22d83e6" class="outline-2">
-<h2 id="org22d83e6"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> table 表格的使用</h2>
+<div id="outline-container-org22e367c" class="outline-2">
+<h2 id="org22e367c"><span class="section-number-2">3</span> <span class="done DONE">DONE</span> table 表格的使用</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 表格的使用主要通过"|"符号实现
@@ -618,16 +618,16 @@ C-c C-u backward to higher level headings.?
 但是,显然,可以看出,这样的表格无法进行高效的输入,因为中间那行长长的横线很烦人.解决方案通常是:当你输入了"|-"之后,直接使用TAB进行自动补充.除此之外,你也可以通过TAB形成一个新的填空.
 </p>
 </div>
-<div id="outline-container-orgd4a6db0" class="outline-3">
-<h3 id="orgd4a6db0"><span class="section-number-3">3.1</span> 使用C-c | 形成一个新的表格</h3>
+<div id="outline-container-org2db005c" class="outline-3">
+<h3 id="org2db005c"><span class="section-number-3">3.1</span> 使用C-c | 形成一个新的表格</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 如题所述,虽然不怎么常用.
 </p>
 </div>
 </div>
-<div id="outline-container-org36b33e0" class="outline-3">
-<h3 id="org36b33e0"><span class="section-number-3">3.2</span> cell基本变换</h3>
+<div id="outline-container-org2e799c1" class="outline-3">
+<h3 id="org2e799c1"><span class="section-number-3">3.2</span> cell基本变换</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>C-c C-c 在不移动点的前提下重新对齐表格</li>
@@ -638,8 +638,8 @@ C-c C-u backward to higher level headings.?
 </ul>
 </div>
 </div>
-<div id="outline-container-org7dbebda" class="outline-3">
-<h3 id="org7dbebda"><span class="section-number-3">3.3</span> <span class="done DONE">DONE</span> 行与列的变化</h3>
+<div id="outline-container-orge425e5d" class="outline-3">
+<h3 id="orge425e5d"><span class="section-number-3">3.3</span> <span class="done DONE">DONE</span> 行与列的变化</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 行与列的变换都是基于"M"进行的.
@@ -658,16 +658,16 @@ C-c C-u backward to higher level headings.?
 </div>
 </div>
 
-<div id="outline-container-org27aaf91" class="outline-2">
-<h2 id="org27aaf91"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> hyperlinks 超链接</h2>
+<div id="outline-container-org84a8344" class="outline-2">
+<h2 id="org84a8344"><span class="section-number-2">4</span> <span class="done DONE">DONE</span> hyperlinks 超链接</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 超链接,不用多数,一般遵循[ [link] [description] ] .对其进行编辑,可以通过C-c C-l进行.
 </p>
 </div>
 
-<div id="outline-container-org2b77235" class="outline-3">
-<h3 id="org2b77235"><span class="section-number-3">4.1</span> 内部链接</h3>
+<div id="outline-container-orga3ce561" class="outline-3">
+<h3 id="orga3ce561"><span class="section-number-3">4.1</span> 内部链接</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 内部链接这里作者并没有给出详细的阐述.笔者尝试了以下,对于特殊的一些格式似乎都是可以识别的.
@@ -675,8 +675,8 @@ C-c C-u backward to higher level headings.?
 </div>
 </div>
 
-<div id="outline-container-orgf8b21d6" class="outline-3">
-<h3 id="orgf8b21d6"><span class="section-number-3">4.2</span> 外部链接</h3>
+<div id="outline-container-org6d8a1e4" class="outline-3">
+<h3 id="org6d8a1e4"><span class="section-number-3">4.2</span> 外部链接</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 首先,罗列一些典型的外部链接:
@@ -711,8 +711,8 @@ id:B7423F4D-2E8A-471B-8810-C40F074717E9&#8217;        link to heading by ID
 </div>
 </div>
 
-<div id="outline-container-org0b9c8f5" class="outline-3">
-<h3 id="org0b9c8f5"><span class="section-number-3">4.3</span> handling links, 处理链接</h3>
+<div id="outline-container-orgcfa92ec" class="outline-3">
+<h3 id="orgcfa92ec"><span class="section-number-3">4.3</span> handling links, 处理链接</h3>
 <div class="outline-text-3" id="text-4-3">
 <ol class="org-ol">
 <li>C-c C-l 插入一个链接.当该处存在链接时,其意义是修改一个链接.</li>
@@ -721,12 +721,12 @@ id:B7423F4D-2E8A-471B-8810-C40F074717E9&#8217;        link to heading by ID
 </div>
 </div>
 </div>
-<div id="outline-container-org58ef04f" class="outline-2">
-<h2 id="org58ef04f"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> todo iteems  待办项目</h2>
+<div id="outline-container-orgef56bef" class="outline-2">
+<h2 id="orgef56bef"><span class="section-number-2">5</span> <span class="done DONE">DONE</span> todo iteems  待办项目</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org942a1bf" class="outline-3">
-<h3 id="org942a1bf"><span class="section-number-3">5.1</span> 有关todo的基本操作</h3>
+<div id="outline-container-org075857a" class="outline-3">
+<h3 id="org075857a"><span class="section-number-3">5.1</span> 有关todo的基本操作</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 当一个items的前面包含todo的时候,它就变成了一个todo 的item.
@@ -742,8 +742,8 @@ id:B7423F4D-2E8A-471B-8810-C40F074717E9&#8217;        link to heading by ID
 </div>
 </div>
 
-<div id="outline-container-org3562fa5" class="outline-3">
-<h3 id="org3562fa5"><span class="section-number-3">5.2</span> <span class="done DONE">DONE</span> muti-state workflow  多态工作流</h3>
+<div id="outline-container-org28a2cae" class="outline-3">
+<h3 id="org28a2cae"><span class="section-number-3">5.2</span> <span class="done DONE">DONE</span> muti-state workflow  多态工作流</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 muti-state指的就是"并非所有的待办都是todo-&gt;done"循环的产物.比如debug的过程,可能是下面的形式.
@@ -764,19 +764,19 @@ muti-state指的就是"并非所有的待办都是todo-&gt;done"循环的产物.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc34312" class="outline-3">
-<h3 id="orgbc34312"><span class="section-number-3">5.3</span> Progress Logging 进展记录</h3>
+<div id="outline-container-org7e89ecf" class="outline-3">
+<h3 id="org7e89ecf"><span class="section-number-3">5.3</span> Progress Logging 进展记录</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 进展记录,最简单的使用方法是通过引入一个前缀"C-u",来加入一个时间戳.也就是通过"C-u C-c C-t"来改变todo项目的状态.
 emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/guide/Clocking-Work-Time.html#Clocking-Work-Time">此处</a>.
 </p>
 </div>
-<div id="outline-container-org0960024" class="outline-4">
-<h4 id="org0960024"><span class="section-number-4">5.3.1</span> <span class="todo TODO">TODO</span> 阅读clocking working time</h4>
+<div id="outline-container-org8a2ad6d" class="outline-4">
+<h4 id="org8a2ad6d"><span class="section-number-4">5.3.1</span> <span class="todo TODO">TODO</span> 阅读clocking working time</h4>
 </div>
-<div id="outline-container-orged91a1b" class="outline-4">
-<h4 id="orged91a1b"><span class="section-number-4">5.3.2</span> closing items 关闭项目</h4>
+<div id="outline-container-orga61c9f5" class="outline-4">
+<h4 id="orga61c9f5"><span class="section-number-4">5.3.2</span> closing items 关闭项目</h4>
 <div class="outline-text-4" id="text-5-3-2">
 <p>
 通过引入
@@ -788,8 +788,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </p>
 </div>
 </div>
-<div id="outline-container-orgf046890" class="outline-4">
-<h4 id="orgf046890"><span class="section-number-4">5.3.3</span> tracking todo state changes</h4>
+<div id="outline-container-orgb8f08d9" class="outline-4">
+<h4 id="orgb8f08d9"><span class="section-number-4">5.3.3</span> tracking todo state changes</h4>
 <div class="outline-text-4" id="text-5-3-3">
 <p>
 没兴趣做.略.
@@ -797,8 +797,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 </div>
-<div id="outline-container-orge582243" class="outline-3">
-<h3 id="orge582243"><span class="section-number-3">5.4</span> Priorities 优先级</h3>
+<div id="outline-container-org6ccd255" class="outline-3">
+<h3 id="org6ccd255"><span class="section-number-3">5.4</span> Priorities 优先级</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 就是对todo设置优先级的问题.一般优先级会用ABC进行表达.
@@ -809,16 +809,16 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd7bb594" class="outline-3">
-<h3 id="orgd7bb594"><span class="section-number-3">5.5</span> break tasks down into subtasks 将任务分解为子任务</h3>
+<div id="outline-container-org91e5e42" class="outline-3">
+<h3 id="org91e5e42"><span class="section-number-3">5.5</span> break tasks down into subtasks 将任务分解为子任务</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 在父标题下使用<code>[/]</code>或者<code>[%]</code>,之后,在子标题里设置todo的状态,就可以了.
 </p>
 </div>
 </div>
-<div id="outline-container-org0f51d6f" class="outline-3">
-<h3 id="org0f51d6f"><span class="section-number-3">5.6</span> checkboxes 复选框</h3>
+<div id="outline-container-org8817660" class="outline-3">
+<h3 id="org8817660"><span class="section-number-3">5.6</span> checkboxes 复选框</h3>
 <div class="outline-text-3" id="text-5-6">
 <p>
 在使用plain list的时候,可能会用到这个功能来进行进度管理.
@@ -840,8 +840,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 
-<div id="outline-container-org0d5c2d5" class="outline-2">
-<h2 id="org0d5c2d5"><span class="section-number-2">6</span> <span class="done DONE">DONE</span> Tags 标签</h2>
+<div id="outline-container-org6f0de92" class="outline-2">
+<h2 id="org6f0de92"><span class="section-number-2">6</span> <span class="done DONE">DONE</span> Tags 标签</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 标签是用来进行交叉引用的一类东西,标签类似于完成latex里label的功能.标签一般被放在headline的后面,前与后都用":"作为连接.下面是一个简单的例子.
@@ -855,8 +855,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 
-<div id="outline-container-org91a3707" class="outline-3">
-<h3 id="org91a3707"><span class="section-number-3">6.1</span> tag inheritance 标签层级</h3>
+<div id="outline-container-orgd867044" class="outline-3">
+<h3 id="orgd867044"><span class="section-number-3">6.1</span> tag inheritance 标签层级</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 以上面的例子为示,标签的层级具有一定的关联性.比如最后的headline,它包含着所有的标签,也就是,他继承了他的父标题以及祖父标题的标签.
@@ -873,8 +873,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 
-<div id="outline-container-org7ff4c40" class="outline-3">
-<h3 id="org7ff4c40"><span class="section-number-3">6.2</span> 设置标签&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span></span></h3>
+<div id="outline-container-orga74ffa6" class="outline-3">
+<h3 id="orga74ffa6"><span class="section-number-3">6.2</span> 设置标签&#xa0;&#xa0;&#xa0;<span class="tag"><span class="test">test</span></span></h3>
 <div class="outline-text-3" id="text-6-2">
 <ol class="org-ol">
 <li>M-TAB 无法使用,与系统的页面转换重合</li>
@@ -906,8 +906,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 
-<div id="outline-container-org6a928db" class="outline-3">
-<h3 id="org6a928db"><span class="section-number-3">6.3</span> 标签组</h3>
+<div id="outline-container-orgc83caf6" class="outline-3">
+<h3 id="orgc83caf6"><span class="section-number-3">6.3</span> 标签组</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 标签组是很多个标签组成的集合.他的用途是:当进行标签的搜索时,如果输入了标签组的名字,那么就可以返回匹配标签组内所有标签headlines
@@ -922,8 +922,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 </div>
 
-<div id="outline-container-orgd26be2a" class="outline-3">
-<h3 id="orgd26be2a"><span class="section-number-3">6.4</span> 标签的搜索</h3>
+<div id="outline-container-org6e55495" class="outline-3">
+<h3 id="org6e55495"><span class="section-number-3">6.4</span> 标签的搜索</h3>
 <div class="outline-text-3" id="text-6-4">
 <ol class="org-ol">
 <li>C-c / m or C-c \  生成一个sparse tree,</li>
@@ -939,8 +939,8 @@ emacs里面有专门的时间记录,详细可参阅<a href="https://orgmode.org/
 </div>
 
 
-<div id="outline-container-org56d50a3" class="outline-2">
-<h2 id="org56d50a3"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> Properties</h2>
+<div id="outline-container-org55b6f95" class="outline-2">
+<h2 id="org55b6f95"><span class="section-number-2">7</span> <span class="done DONE">DONE</span> Properties</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 properties类似于一种“面向对象”的使用方式，也就是定义了一个实体，下面有诸多变量，并依据这些变量具有某些特定的数值来描述其属性。
@@ -948,19 +948,19 @@ properties类似于一种“面向对象”的使用方式，也就是定义了�
 </p>
 </div>
 </div>
-<div id="outline-container-org6aa70ed" class="outline-2">
-<h2 id="org6aa70ed"><span class="section-number-2">8</span> <span class="done DONE">DONE</span> dates and times</h2>
+<div id="outline-container-orgc5e7201" class="outline-2">
+<h2 id="orgc5e7201"><span class="section-number-2">8</span> <span class="done DONE">DONE</span> dates and times</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org2cb60ac" class="outline-3">
-<h3 id="org2cb60ac"><span class="section-number-3">8.1</span> timestamps 时间戳</h3>
+<div id="outline-container-orgc4e0b53" class="outline-3">
+<h3 id="orgc4e0b53"><span class="section-number-3">8.1</span> timestamps 时间戳</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 此处存在各种各样格式的时间戳，然而，对我而言，这并非需要关心或者讨论的重点，因而对其仅进行简要介绍.
 </p>
 </div>
-<div id="outline-container-org654d95c" class="outline-4">
-<h4 id="org654d95c"><span class="section-number-4">8.1.1</span> C-c . 插入时间戳</h4>
+<div id="outline-container-org489c25b" class="outline-4">
+<h4 id="org489c25b"><span class="section-number-4">8.1.1</span> C-c . 插入时间戳</h4>
 <div class="outline-text-4" id="text-8-1-1">
 <p>
 这个命令用来插入一个时间戳,(如果有时间戳了,那么就是修改这个时间戳).连续使用两次这个指令可以形成一个时间戳的范围,在这个范围之内可以完成一些或许更加一般的事.
@@ -968,16 +968,16 @@ properties类似于一种“面向对象”的使用方式，也就是定义了�
 </p>
 </div>
 </div>
-<div id="outline-container-orgc3da9b3" class="outline-4">
-<h4 id="orgc3da9b3"><span class="section-number-4">8.1.2</span> C-c ! 插入非活动类型时间戳</h4>
+<div id="outline-container-org9878b59" class="outline-4">
+<h4 id="org9878b59"><span class="section-number-4">8.1.2</span> C-c ! 插入非活动类型时间戳</h4>
 <div class="outline-text-4" id="text-8-1-2">
 <p>
 这个命令插入的时间戳不会被调用在agenda里面.
 </p>
 </div>
 </div>
-<div id="outline-container-org0012a11" class="outline-4">
-<h4 id="org0012a11"><span class="section-number-4">8.1.3</span> S-方向键</h4>
+<div id="outline-container-org7ce19f8" class="outline-4">
+<h4 id="org7ce19f8"><span class="section-number-4">8.1.3</span> S-方向键</h4>
 <div class="outline-text-4" id="text-8-1-3">
 <p>
 控制上下左右,似乎有一些独特的细节,不过我不关心.
@@ -985,12 +985,12 @@ properties类似于一种“面向对象”的使用方式，也就是定义了�
 </div>
 </div>
 </div>
-<div id="outline-container-org1d2a316" class="outline-3">
-<h3 id="org1d2a316"><span class="section-number-3">8.2</span> deadline and scheduling 截止日期与时间表</h3>
+<div id="outline-container-org3755127" class="outline-3">
+<h3 id="org3755127"><span class="section-number-3">8.2</span> deadline and scheduling 截止日期与时间表</h3>
 <div class="outline-text-3" id="text-8-2">
 </div>
-<div id="outline-container-orgf4a0134" class="outline-4">
-<h4 id="orgf4a0134"><span class="section-number-4">8.2.1</span> C-c C-d</h4>
+<div id="outline-container-orgf480dcd" class="outline-4">
+<h4 id="orgf480dcd"><span class="section-number-4">8.2.1</span> C-c C-d</h4>
 <div class="outline-text-4" id="text-8-2-1">
 <p>
 这样就直接输入了一个deadline.
@@ -998,8 +998,8 @@ properties类似于一种“面向对象”的使用方式，也就是定义了�
 </div>
 </div>
 
-<div id="outline-container-org1963058" class="outline-4">
-<h4 id="org1963058"><span class="section-number-4">8.2.2</span> C-c C-s</h4>
+<div id="outline-container-org25dc018" class="outline-4">
+<h4 id="org25dc018"><span class="section-number-4">8.2.2</span> C-c C-s</h4>
 <div class="outline-text-4" id="text-8-2-2">
 <p>
 schedule是一种描述一种东西什么时间开始的日期.
@@ -1009,8 +1009,8 @@ schedule是一种描述一种东西什么时间开始的日期.
 </div>
 </div>
 
-<div id="outline-container-org9cf43be" class="outline-3">
-<h3 id="org9cf43be"><span class="section-number-3">8.3</span> clocking work time 记录在特定项目上消耗的时间</h3>
+<div id="outline-container-orged2b77c" class="outline-3">
+<h3 id="orged2b77c"><span class="section-number-3">8.3</span> clocking work time 记录在特定项目上消耗的时间</h3>
 <div class="outline-text-3" id="text-8-3">
 <p>
 如题所示,这一章来看一看如何记录消耗在特定项目上的时间.
@@ -1025,19 +1025,19 @@ schedule是一种描述一种东西什么时间开始的日期.
 </div>
 </div>
 </div>
-<div id="outline-container-org613af65" class="outline-2">
-<h2 id="org613af65"><span class="section-number-2">9</span> <span class="todo INPROGRESS">INPROGRESS</span> capture, refile, archive</h2>
+<div id="outline-container-orga0cfe9d" class="outline-2">
+<h2 id="orga0cfe9d"><span class="section-number-2">9</span> <span class="todo INPROGRESS">INPROGRESS</span> capture, refile, archive</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-orgb96e729" class="outline-3">
-<h3 id="orgb96e729"><span class="section-number-3">9.1</span> capture</h3>
+<div id="outline-container-org198d507" class="outline-3">
+<h3 id="org198d507"><span class="section-number-3">9.1</span> capture</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 capture（名词，捕捉）: capture是指在知识系统中快速捕捉新的主意与任务（task）的一种方式。并且，这种捕捉还可以关联与其相关的一些材料。这一整套的流程被称作capture。
 </p>
 </div>
-<div id="outline-container-org6ebc596" class="outline-4">
-<h4 id="org6ebc596"><span class="section-number-4">9.1.1</span> setting up capture 设置capture</h4>
+<div id="outline-container-org5f0a575" class="outline-4">
+<h4 id="org5f0a575"><span class="section-number-4">9.1.1</span> setting up capture 设置capture</h4>
 <div class="outline-text-4" id="text-9-1-1">
 <p>
 可以通过下面命令设置默认的笔记路径。
@@ -1057,8 +1057,8 @@ capture（名词，捕捉）: capture是指在知识系统中快速捕捉新的�
 </div>
 </div>
 </div>
-<div id="outline-container-org077ce1d" class="outline-4">
-<h4 id="org077ce1d"><span class="section-number-4">9.1.2</span> using capture 使用capture</h4>
+<div id="outline-container-orgcb15138" class="outline-4">
+<h4 id="orgcb15138"><span class="section-number-4">9.1.2</span> using capture 使用capture</h4>
 <div class="outline-text-4" id="text-9-1-2">
 <ol class="org-ol">
 <li>M-x org-capture</li>
@@ -1086,8 +1086,8 @@ capture（名词，捕捉）: capture是指在知识系统中快速捕捉新的�
 </ol>
 </div>
 </div>
-<div id="outline-container-org7d43653" class="outline-4">
-<h4 id="org7d43653"><span class="section-number-4">9.1.3</span> <span class="done DONE">DONE</span> capture templates</h4>
+<div id="outline-container-orgbb14706" class="outline-4">
+<h4 id="orgbb14706"><span class="section-number-4">9.1.3</span> <span class="done DONE">DONE</span> capture templates</h4>
 <div class="outline-text-4" id="text-9-1-3">
 <p>
  中途推出按钮.
@@ -1114,8 +1114,8 @@ capture（名词，捕捉）: capture是指在知识系统中快速捕捉新的�
 </div>
 </div>
 
-<div id="outline-container-orga7b006e" class="outline-3">
-<h3 id="orga7b006e"><span class="section-number-3">9.2</span> refile and copy 文件重归档与复制</h3>
+<div id="outline-container-org1a7a664" class="outline-3">
+<h3 id="org1a7a664"><span class="section-number-3">9.2</span> refile and copy 文件重归档与复制</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 本节的意思,似乎就是简化剪切,切换,粘贴这一整套的文本条目重新归档的过程.
@@ -1146,16 +1146,16 @@ C-c C-w 就是说,要把这一小节(光标所在的小节)的内容归档至其
 </div>
 </div>
 
-<div id="outline-container-org3c36a2e" class="outline-2">
-<h2 id="org3c36a2e"><span class="section-number-2">10</span> <span class="todo INPROGRESS">INPROGRESS</span> agenda views</h2>
+<div id="outline-container-org175e395" class="outline-2">
+<h2 id="org175e395"><span class="section-number-2">10</span> <span class="todo INPROGRESS">INPROGRESS</span> agenda views</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Agenda是一种对零散的todo文件进行聚集处理的操作。
 </p>
 </div>
 
-<div id="outline-container-orgd9f2719" class="outline-3">
-<h3 id="orgd9f2719"><span class="section-number-3">10.1</span> agenda files</h3>
+<div id="outline-container-orgfefd845" class="outline-3">
+<h3 id="orgfefd845"><span class="section-number-3">10.1</span> agenda files</h3>
 <div class="outline-text-3" id="text-10-1">
 <ol class="org-ol">
 <li>C-c [ 将当前文件加入到agenda file列表中</li>
@@ -1166,8 +1166,8 @@ Agenda是一种对零散的todo文件进行聚集处理的操作。
 </div>
 </div>
 
-<div id="outline-container-org4730928" class="outline-3">
-<h3 id="org4730928"><span class="section-number-3">10.2</span> The Agenda Dispatcher 日程调度分配器</h3>
+<div id="outline-container-orga1c7c56" class="outline-3">
+<h3 id="orga1c7c56"><span class="section-number-3">10.2</span> The Agenda Dispatcher 日程调度分配器</h3>
 <div class="outline-text-3" id="text-10-2">
 <p>
 使用M-x org-agenda进行激活,或者使用快捷键C-c a.
@@ -1181,8 +1181,8 @@ Agenda是一种对零散的todo文件进行聚集处理的操作。
 </ul>
 </div>
 </div>
-<div id="outline-container-org6131fcb" class="outline-3">
-<h3 id="org6131fcb"><span class="section-number-3">10.3</span> The Weekly /Daily  Agenda</h3>
+<div id="outline-container-org5ebc154" class="outline-3">
+<h3 id="org5ebc154"><span class="section-number-3">10.3</span> The Weekly /Daily  Agenda</h3>
 <div class="outline-text-3" id="text-10-3">
 <p>
 就像是传统的纸上的日程表一样,weekly-daily agenda给出每天或每周所需要干的事.
@@ -1190,8 +1190,8 @@ Agenda是一种对零散的todo文件进行聚集处理的操作。
 </p>
 </div>
 </div>
-<div id="outline-container-org3e85907" class="outline-3">
-<h3 id="org3e85907"><span class="section-number-3">10.4</span> the global todo list 全局todo列表</h3>
+<div id="outline-container-org59e4298" class="outline-3">
+<h3 id="org59e4298"><span class="section-number-3">10.4</span> the global todo list 全局todo列表</h3>
 <div class="outline-text-3" id="text-10-4">
 <p>
 全局todo列表将所有的未完成的todo项目进行了一个统一的收集,可以用t关键字进行查询.
@@ -1202,19 +1202,19 @@ Agenda是一种对零散的todo文件进行聚集处理的操作。
 </ul>
 </div>
 </div>
-<div id="outline-container-org52a5e77" class="outline-3">
-<h3 id="org52a5e77"><span class="section-number-3">10.5</span> Matching Tags and Properties 匹配标签和属性</h3>
+<div id="outline-container-org3f981a2" class="outline-3">
+<h3 id="org3f981a2"><span class="section-number-3">10.5</span> Matching Tags and Properties 匹配标签和属性</h3>
 </div>
 </div>
-<div id="outline-container-orge72f83c" class="outline-2">
-<h2 id="orge72f83c"><span class="section-number-2">11</span> <span class="done DONE">DONE</span> markup for rich contents</h2>
+<div id="outline-container-orgba57b37" class="outline-2">
+<h2 id="orgba57b37"><span class="section-number-2">11</span> <span class="done DONE">DONE</span> markup for rich contents</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 也就是关于org进行文本信息标注的一些常见而具体的手段.
 </p>
 </div>
-<div id="outline-container-orgab49f83" class="outline-3">
-<h3 id="orgab49f83"><span class="section-number-3">11.1</span> paragraphs 段落</h3>
+<div id="outline-container-orgfc3637f" class="outline-3">
+<h3 id="orgfc3637f"><span class="section-number-3">11.1</span> paragraphs 段落</h3>
 <div class="outline-text-3" id="text-11-1">
 <p>
 同makrdown一样,paragraph也是通过一个空的行进行段与段之间的分割.除此之外,也可以使用latex中常见的"\\".
@@ -1260,8 +1260,8 @@ but not any simpler
 </div>
 </div>
 
-<div id="outline-container-org49d636b" class="outline-3">
-<h3 id="org49d636b"><span class="section-number-3">11.2</span> Emphasis and Monospace 强调与等宽字体</h3>
+<div id="outline-container-orgef1bae6" class="outline-3">
+<h3 id="orgef1bae6"><span class="section-number-3">11.2</span> Emphasis and Monospace 强调与等宽字体</h3>
 <div class="outline-text-3" id="text-11-2">
 <p>
 You can make words ‘*bold*’, ‘/italic/’, ‘<sub>underlined</sub>_’, ‘=verbatim=’ and ‘~code~’, and, if you must, ‘+strike-through+’. Text in the code and verbatim string is not processed for Org specific syntax; it is exported verbatim.
@@ -1273,8 +1273,8 @@ You can make words ‘*bold*’, ‘/italic/’, ‘<sub>underlined</sub>_’, �
 </div>
 </div>
 
-<div id="outline-container-orgaedc0bc" class="outline-3">
-<h3 id="orgaedc0bc"><span class="section-number-3">11.3</span> embedded latex</h3>
+<div id="outline-container-orgbd241d5" class="outline-3">
+<h3 id="orgbd241d5"><span class="section-number-3">11.3</span> embedded latex</h3>
 <div class="outline-text-3" id="text-11-3">
 <p>
 org对latex的嵌入十分灵活,除了下文中给出的世界嵌入latex风格的任何语言之外,此处还有最基本的对latex风格公式的支持.
@@ -1312,8 +1312,8 @@ either \[ a=+\sqrt{2} \] or \[ a=-\sqrt{2} \].
 </div>
 </div>
 
-<div id="outline-container-org1ecd375" class="outline-3">
-<h3 id="org1ecd375"><span class="section-number-3">11.4</span> literal examples 一些例子</h3>
+<div id="outline-container-org4b97f79" class="outline-3">
+<h3 id="org4b97f79"><span class="section-number-3">11.4</span> literal examples 一些例子</h3>
 <div class="outline-text-3" id="text-11-4">
 <p>
 这里主要想介绍一些文学编程中如何进行举例的问题.
@@ -1349,8 +1349,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-orgcb4f625" class="outline-3">
-<h3 id="orgcb4f625"><span class="section-number-3">11.5</span> Images 插入图片的问题</h3>
+<div id="outline-container-orgc373d46" class="outline-3">
+<h3 id="orgc373d46"><span class="section-number-3">11.5</span> Images 插入图片的问题</h3>
 <div class="outline-text-3" id="text-11-5">
 <p>
 一张图片本质上是一个链接,所以图片均可以通过超链接的方式[[][]]进行表达,特殊地,如果想像latex那样给出描述和引用标签的话,图的定义就需要添加以下附属信息:
@@ -1367,18 +1367,23 @@ Some example from a text file.
 下面插入一张图片作为示例
 </p>
 
-<p>
-<a href="images/20200616184304.png">示例图片</a>
-</p>
 
-<p>
-<a href="./images/20200616184304.png/">./images/20200616184304.png/</a>
+<div class="figure">
+<p><img src="./images/20200616184304.png" alt="20200616184304.png" />
 </p>
 </div>
+
+
+<div id="org4cc9617" class="figure">
+<p><img src="./images/20200616184304.png" alt="20200616184304.png" />
+</p>
+<p><span class="figure-number">Figure 2: </span>测试图片效果</p>
+</div>
+</div>
 </div>
 
-<div id="outline-container-orgdd904f4" class="outline-3">
-<h3 id="orgdd904f4"><span class="section-number-3">11.6</span> creating footnotes 插入脚注</h3>
+<div id="outline-container-org5815699" class="outline-3">
+<h3 id="org5815699"><span class="section-number-3">11.6</span> creating footnotes 插入脚注</h3>
 <div class="outline-text-3" id="text-11-6">
 <p>
 插入脚注的方法很简单<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>去使用,下面是一个示例:
@@ -1402,8 +1407,8 @@ Some example from a text file.
 </div>
 </div>
 </div>
-<div id="outline-container-org78988c7" class="outline-2">
-<h2 id="org78988c7"><span class="section-number-2">12</span> <span class="done DONE">DONE</span> exporting</h2>
+<div id="outline-container-orgd92cea4" class="outline-2">
+<h2 id="orgd92cea4"><span class="section-number-2">12</span> <span class="done DONE">DONE</span> exporting</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 这一章主要讨论如何使用org进行文档的导出.一般,关于文档导出的工作,可以通过C-c C-e进行调用.
@@ -1411,8 +1416,8 @@ Some example from a text file.
 </div>
 
 
-<div id="outline-container-orgd360587" class="outline-3">
-<h3 id="orgd360587"><span class="section-number-3">12.1</span> 导出时需要的一些特殊信息</h3>
+<div id="outline-container-orgf7808a1" class="outline-3">
+<h3 id="orgf7808a1"><span class="section-number-3">12.1</span> 导出时需要的一些特殊信息</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 比如,可以在文档的所有位置(但是建议于开头处)插入此类:
@@ -1436,8 +1441,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-orgf7c7fab" class="outline-3">
-<h3 id="orgf7c7fab"><span class="section-number-3">12.2</span> table of contents 内容目录</h3>
+<div id="outline-container-orgc9802ee" class="outline-3">
+<h3 id="orgc9802ee"><span class="section-number-3">12.2</span> table of contents 内容目录</h3>
 <div class="outline-text-3" id="text-12-2">
 <p>
 在org中,导出会默认在第一个headline前面插入目录.可以通过下面的一些特殊的命令对目录进行自定义.
@@ -1451,8 +1456,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-orgd5e01f2" class="outline-3">
-<h3 id="orgd5e01f2"><span class="section-number-3">12.3</span> include files 导入其他文件</h3>
+<div id="outline-container-orgeeb4a90" class="outline-3">
+<h3 id="orgeeb4a90"><span class="section-number-3">12.3</span> include files 导入其他文件</h3>
 <div class="outline-text-3" id="text-12-3">
 <p>
 可以在org文件里插入其他文件,比如,插入一段emacs的配置文件信息,将之作为src并以elisp的语法进行展示.
@@ -1467,8 +1472,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-org9893982" class="outline-3">
-<h3 id="org9893982"><span class="section-number-3">12.4</span> comment lines 注释行</h3>
+<div id="outline-container-org014a590" class="outline-3">
+<h3 id="org014a590"><span class="section-number-3">12.4</span> comment lines 注释行</h3>
 <div class="outline-text-3" id="text-12-4">
 <p>
 注释符号为＃号.
@@ -1476,12 +1481,12 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-org953a82c" class="outline-3">
-<h3 id="org953a82c"><span class="section-number-3">12.5</span> 正文开始:导出成不同格式的文件</h3>
+<div id="outline-container-org7774515" class="outline-3">
+<h3 id="org7774515"><span class="section-number-3">12.5</span> 正文开始:导出成不同格式的文件</h3>
 <div class="outline-text-3" id="text-12-5">
 </div>
-<div id="outline-container-orgfa4bd3c" class="outline-4">
-<h4 id="orgfa4bd3c"><span class="section-number-4">12.5.1</span> ASCII UTF-8</h4>
+<div id="outline-container-org2c748ba" class="outline-4">
+<h4 id="org2c748ba"><span class="section-number-4">12.5.1</span> ASCII UTF-8</h4>
 <div class="outline-text-4" id="text-12-5-1">
 <p>
 导出为txt文件.使用C-c C-e t a(scii) 或C-c C-e t u(tf-8) 
@@ -1489,8 +1494,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-orgf2b8e89" class="outline-4">
-<h4 id="orgf2b8e89"><span class="section-number-4">12.5.2</span> HTML</h4>
+<div id="outline-container-orgad4f10c" class="outline-4">
+<h4 id="orgad4f10c"><span class="section-number-4">12.5.2</span> HTML</h4>
 <div class="outline-text-4" id="text-12-5-2">
 <p>
 使用C-c C-e h h生成一个html文件,使用C-c C-e h o 生成并在浏览器里打开这样一个文件.
@@ -1519,8 +1524,8 @@ Some example from a text file.
 </div>
 </div>
 
-<div id="outline-container-orgca2208c" class="outline-4">
-<h4 id="orgca2208c"><span class="section-number-4">12.5.3</span> latex export</h4>
+<div id="outline-container-orgb5099b5" class="outline-4">
+<h4 id="orgb5099b5"><span class="section-number-4">12.5.3</span> latex export</h4>
 <div class="outline-text-4" id="text-12-5-3">
 <p>
 有关latex文本的导出,是一个很重要的地方.其重要之处在于,latex的语法比org复杂更多,因此,在这种转变的过程中,难免存在大量的部分是默认的.
@@ -1528,7 +1533,7 @@ Some example from a text file.
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org84f52e1"></a>设置document的class<br />
+<li><a id="org33a64c3"></a>设置document的class<br />
 <div class="outline-text-5" id="text-12-5-3-1">
 <p>
 org默认其为article类型,但是,当然,也可以自己定义所使用的latex的类,使用如下命令:
@@ -1543,7 +1548,7 @@ org默认其为article类型,但是,当然,也可以自己定义所使用的late
 </div>
 </li>
 
-<li><a id="org9784153"></a>基本的导出命令.<br />
+<li><a id="org734e6c8"></a>基本的导出命令.<br />
 <div class="outline-text-5" id="text-12-5-3-2">
 <ol class="org-ol">
 <li>C-c C-e l l 导出一个latex文件</li>
@@ -1555,7 +1560,7 @@ org默认其为article类型,但是,当然,也可以自己定义所使用的late
 </p>
 </div>
 </li>
-<li><a id="orgc294c17"></a>在org中插入latex代码块<br />
+<li><a id="orgaa8f16e"></a>在org中插入latex代码块<br />
 <div class="outline-text-5" id="text-12-5-3-3">
 <p>
 一般,org允许在文档中插入任意的latex代码块,其基本思路与HTML的插入类似,规则为:
@@ -1583,8 +1588,8 @@ org默认其为article类型,但是,当然,也可以自己定义所使用的late
 </li>
 </ol>
 </div>
-<div id="outline-container-orgc914a46" class="outline-4">
-<h4 id="orgc914a46"><span class="section-number-4">12.5.4</span> iCalendar export</h4>
+<div id="outline-container-orgbc04215" class="outline-4">
+<h4 id="orgbc04215"><span class="section-number-4">12.5.4</span> iCalendar export</h4>
 <div class="outline-text-4" id="text-12-5-4">
 <p>
 关于这个东西,大多数人看见了或许会觉得奇怪,因为这个东西并不是十分地让人觉得熟悉.
@@ -1598,8 +1603,8 @@ org默认其为article类型,但是,当然,也可以自己定义所使用的late
 </div>
 </div>
 </div>
-<div id="outline-container-orgf4f41fb" class="outline-2">
-<h2 id="orgf4f41fb"><span class="section-number-2">13</span> <span class="done DONE">DONE</span> publishing</h2>
+<div id="outline-container-orge3fedba" class="outline-2">
+<h2 id="orge3fedba"><span class="section-number-2">13</span> <span class="done DONE">DONE</span> publishing</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 publishing是一种手段,将笔记转换为html等格式之后上传到博客上.
@@ -1630,15 +1635,15 @@ publishing是一种手段,将笔记转换为html等格式之后上传到博客�
 </div>
 </div>
 
-<div id="outline-container-org659a6ab" class="outline-2">
-<h2 id="org659a6ab"><span class="section-number-2">14</span> <span class="todo INPROGRESS">INPROGRESS</span> working with source code 在笔记里插入源码<code>[%]</code></h2>
+<div id="outline-container-orgac13169" class="outline-2">
+<h2 id="orgac13169"><span class="section-number-2">14</span> <span class="todo INPROGRESS">INPROGRESS</span> working with source code 在笔记里插入源码<code>[%]</code></h2>
 <div class="outline-text-2" id="text-14">
 <p>
 org 在编辑源码,运行源码,tangling源码与导出源码上都有一些贡献.
 一般来说,一个源码都可以表现成下面的格式:
 </p>
 <div class="org-src-container">
-<pre class="src src-<language>" id="org3ef7ab9">&lt;body&gt;
+<pre class="src src-<language>" id="orgc738777">&lt;body&gt;
 </pre>
 </div>
 
@@ -1714,25 +1719,25 @@ org 在编辑源码,运行源码,tangling源码与导出源码上都有一些贡
 这些内容均来自于<a href="https://orgmode.org/guide/Working-with-Source-Code.html#Working-with-Source-Code">这里</a>.
 </p>
 </div>
-<div id="outline-container-org9170d56" class="outline-3">
-<h3 id="org9170d56"><span class="section-number-3">14.1</span> <span class="todo TODO">TODO</span> using header arguments</h3>
+<div id="outline-container-orgb716582" class="outline-3">
+<h3 id="orgb716582"><span class="section-number-3">14.1</span> <span class="todo TODO">TODO</span> using header arguments</h3>
 </div>
-<div id="outline-container-orgbde6e2e" class="outline-3">
-<h3 id="orgbde6e2e"><span class="section-number-3">14.2</span> <span class="todo TODO">TODO</span> evaluating code blocks</h3>
+<div id="outline-container-org59b4edc" class="outline-3">
+<h3 id="org59b4edc"><span class="section-number-3">14.2</span> <span class="todo TODO">TODO</span> evaluating code blocks</h3>
 </div>
-<div id="outline-container-org8a2ec36" class="outline-3">
-<h3 id="org8a2ec36"><span class="section-number-3">14.3</span> <span class="todo TODO">TODO</span> results of evaluation</h3>
+<div id="outline-container-org4eb639d" class="outline-3">
+<h3 id="org4eb639d"><span class="section-number-3">14.3</span> <span class="todo TODO">TODO</span> results of evaluation</h3>
 </div>
-<div id="outline-container-org9a36453" class="outline-3">
-<h3 id="org9a36453"><span class="section-number-3">14.4</span> <span class="todo TODO">TODO</span> exporting code blocks</h3>
+<div id="outline-container-orgc938791" class="outline-3">
+<h3 id="orgc938791"><span class="section-number-3">14.4</span> <span class="todo TODO">TODO</span> exporting code blocks</h3>
 </div>
-<div id="outline-container-org1730280" class="outline-3">
-<h3 id="org1730280"><span class="section-number-3">14.5</span> <span class="todo TODO">TODO</span> extracting source code</h3>
+<div id="outline-container-orgf68f577" class="outline-3">
+<h3 id="orgf68f577"><span class="section-number-3">14.5</span> <span class="todo TODO">TODO</span> extracting source code</h3>
 </div>
 </div>
 
-<div id="outline-container-org0d2258c" class="outline-2">
-<h2 id="org0d2258c"><span class="section-number-2">15</span> <span class="todo TODO">TODO</span> miscellaneous</h2>
+<div id="outline-container-org889d543" class="outline-2">
+<h2 id="org889d543"><span class="section-number-2">15</span> <span class="todo TODO">TODO</span> miscellaneous</h2>
 </div>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
@@ -1747,7 +1752,7 @@ org 在编辑源码,运行源码,tangling源码与导出源码上都有一些贡
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: 梁子</p>
-<p class="date">Created: 2020-06-16 周二 18:56</p>
+<p class="date">Created: 2020-06-18 周四 08:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

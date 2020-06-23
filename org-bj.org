@@ -487,12 +487,11 @@ Here is an example
 
 下面插入一张图片作为示例
 
-[[file:images/20200616184304.png][示例图片]]
+[[./images/20200616184304.png]]
 
 #+caption: 测试图片效果
 #+name: fig:test_img
-[[./images/20200616184304.png/]]
-
+[[./images/20200616184304.png]]
 ** creating footnotes 插入脚注
 插入脚注的方法很简单[fn:easy]去使用,下面是一个示例:
 
