@@ -3,11 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-06-21 周日 21:40 -->
+<!-- 2020-06-28 周日 19:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>每日的周报汇总</title>
 <meta name="generator" content="Org mode" />
+<meta name="author" content="梁子" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -228,52 +229,60 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<h1 class="title">每日的周报汇总</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org56ff68b">1. time series similarity measures</a>
+<li><a href="#org2b7a6a6">1. time series similarity measures</a>
 <ul>
-<li><a href="#org98bb637">1.1. metric</a>
+<li><a href="#org14514c0">1.1. metric</a>
 <ul>
-<li><a href="#orgb68c591">1.1.1. euclidean distance</a></li>
-<li><a href="#orgfad9deb">1.1.2. DTW (Dynamic Time Warping)</a></li>
+<li><a href="#orgc6d3496">1.1.1. euclidean distance</a></li>
+<li><a href="#org606822e">1.1.2. DTW (Dynamic Time Warping)</a></li>
 </ul>
 </li>
-<li><a href="#orgccfa2a7">1.2. search method</a>
+<li><a href="#org791560b">1.2. search method</a>
 <ul>
-<li><a href="#org7a254b8">1.2.1. UCR Suite</a></li>
-<li><a href="#org62fce85">1.2.2. SSH 近似序列搜索</a></li>
-<li><a href="#orgda92218">1.2.3. clustering subsequences</a></li>
-<li><a href="#orgbf66bfc">1.2.4. 一点点疑问</a></li>
-<li><a href="#org1bc50a2">1.2.5. Use Matrix Profile</a></li>
-<li><a href="#org493fceb">1.2.6. progressive similarity search</a></li>
-<li><a href="#orgc071138">1.2.7. 对带高频噪声的时间序列的处理</a></li>
+<li><a href="#orgc1e54de">1.2.1. UCR Suite</a></li>
+<li><a href="#org7c87c2a">1.2.2. SSH 近似序列搜索</a></li>
+<li><a href="#org36c2590">1.2.3. clustering subsequences</a></li>
+<li><a href="#org9d692b3">1.2.4. 一点点疑问</a></li>
+<li><a href="#org92d2daa">1.2.5. Use Matrix Profile</a></li>
+<li><a href="#org3f12f4a">1.2.6. progressive similarity search</a></li>
+<li><a href="#org642398f">1.2.7. 对带高频噪声的时间序列的处理</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org4e5267b">2. self-similarity ICML2019</a>
+<li><a href="#org72ea978">2. self-similarity ICML2019</a>
 <ul>
-<li><a href="#org80a9eb7">2.1. COO Arrangement</a></li>
+<li><a href="#orgd775e7c">2.1. COO Arrangement</a></li>
+</ul>
+</li>
+<li><a href="#org2c09211">3. sketch 与基因序列挖掘 贾鹏</a>
+<ul>
+<li><a href="#org6dc9ac4">3.1. GATK(Genome Analysis Toolkit)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org56ff68b" class="outline-2">
-<h2 id="org56ff68b"><span class="section-number-2">1</span> time series similarity measures</h2>
+
+
+<div id="outline-container-org2b7a6a6" class="outline-2">
+<h2 id="org2b7a6a6"><span class="section-number-2">1</span> time series similarity measures</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
 </p>
 </div>
-<div id="outline-container-org98bb637" class="outline-3">
-<h3 id="org98bb637"><span class="section-number-3">1.1</span> metric</h3>
+<div id="outline-container-org14514c0" class="outline-3">
+<h3 id="org14514c0"><span class="section-number-3">1.1</span> metric</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgb68c591" class="outline-4">
-<h4 id="orgb68c591"><span class="section-number-4">1.1.1</span> euclidean distance</h4>
+<div id="outline-container-orgc6d3496" class="outline-4">
+<h4 id="orgc6d3496"><span class="section-number-4">1.1.1</span> euclidean distance</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 lve.
@@ -281,8 +290,8 @@ lve.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfad9deb" class="outline-4">
-<h4 id="orgfad9deb"><span class="section-number-4">1.1.2</span> DTW (Dynamic Time Warping)</h4>
+<div id="outline-container-org606822e" class="outline-4">
+<h4 id="org606822e"><span class="section-number-4">1.1.2</span> DTW (Dynamic Time Warping)</h4>
 <div class="outline-text-4" id="text-1-1-2">
 
 <div class="figure">
@@ -302,12 +311,12 @@ UCR Suite
 </div>
 </div>
 
-<div id="outline-container-orgccfa2a7" class="outline-3">
-<h3 id="orgccfa2a7"><span class="section-number-3">1.2</span> search method</h3>
+<div id="outline-container-org791560b" class="outline-3">
+<h3 id="org791560b"><span class="section-number-3">1.2</span> search method</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org7a254b8" class="outline-4">
-<h4 id="org7a254b8"><span class="section-number-4">1.2.1</span> UCR Suite</h4>
+<div id="outline-container-orgc1e54de" class="outline-4">
+<h4 id="orgc1e54de"><span class="section-number-4">1.2.1</span> UCR Suite</h4>
 <div class="outline-text-4" id="text-1-2-1">
 
 <div class="figure">
@@ -337,8 +346,8 @@ sfy：只考虑时间序列，没有考虑“语音识别”这种特殊的语�
 </div>
 </div>
 
-<div id="outline-container-org62fce85" class="outline-4">
-<h4 id="org62fce85"><span class="section-number-4">1.2.2</span> SSH 近似序列搜索</h4>
+<div id="outline-container-org7c87c2a" class="outline-4">
+<h4 id="org7c87c2a"><span class="section-number-4">1.2.2</span> SSH 近似序列搜索</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 <a href="images/20200621200911.png ">images/20200621200911.png </a>
@@ -380,8 +389,8 @@ sfy:也有这种思路,但是没有这么做的.
 </div>
 </div>
 
-<div id="outline-container-orgda92218" class="outline-4">
-<h4 id="orgda92218"><span class="section-number-4">1.2.3</span> clustering subsequences</h4>
+<div id="outline-container-org36c2590" class="outline-4">
+<h4 id="org36c2590"><span class="section-number-4">1.2.3</span> clustering subsequences</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 没有特别听明白,天呢.
@@ -396,8 +405,8 @@ sfy:也有这种思路,但是没有这么做的.
 </div>
 
 
-<div id="outline-container-orgbf66bfc" class="outline-4">
-<h4 id="orgbf66bfc"><span class="section-number-4">1.2.4</span> 一点点疑问</h4>
+<div id="outline-container-org9d692b3" class="outline-4">
+<h4 id="org9d692b3"><span class="section-number-4">1.2.4</span> 一点点疑问</h4>
 <div class="outline-text-4" id="text-1-2-4">
 <p>
 究竟啥是random walk啊!
@@ -405,16 +414,16 @@ shapelet究竟是什么东西?
 </p>
 </div>
 </div>
-<div id="outline-container-org1bc50a2" class="outline-4">
-<h4 id="org1bc50a2"><span class="section-number-4">1.2.5</span> Use Matrix Profile</h4>
+<div id="outline-container-org92d2daa" class="outline-4">
+<h4 id="org92d2daa"><span class="section-number-4">1.2.5</span> Use Matrix Profile</h4>
 <div class="outline-text-4" id="text-1-2-5">
 <p>
 对序列切割成若干个子序列,然后计算子序列之间彼此的欧氏距离
 </p>
 </div>
 </div>
-<div id="outline-container-org493fceb" class="outline-4">
-<h4 id="org493fceb"><span class="section-number-4">1.2.6</span> progressive similarity search</h4>
+<div id="outline-container-org3f12f4a" class="outline-4">
+<h4 id="org3f12f4a"><span class="section-number-4">1.2.6</span> progressive similarity search</h4>
 <div class="outline-text-4" id="text-1-2-6">
 
 <div class="figure">
@@ -423,8 +432,8 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
-<div id="outline-container-orgc071138" class="outline-4">
-<h4 id="orgc071138"><span class="section-number-4">1.2.7</span> 对带高频噪声的时间序列的处理</h4>
+<div id="outline-container-org642398f" class="outline-4">
+<h4 id="org642398f"><span class="section-number-4">1.2.7</span> 对带高频噪声的时间序列的处理</h4>
 <div class="outline-text-4" id="text-1-2-7">
 <p>
 小波变换&rarr; 指纹&rarr; 计算
@@ -439,16 +448,16 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
-<div id="outline-container-org4e5267b" class="outline-2">
-<h2 id="org4e5267b"><span class="section-number-2">2</span> self-similarity ICML2019</h2>
+<div id="outline-container-org72ea978" class="outline-2">
+<h2 id="org72ea978"><span class="section-number-2">2</span> self-similarity ICML2019</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
 如何为SGD挑选合适的数据点,使得模型尽快收敛.
 </p>
 </div>
-<div id="outline-container-org80a9eb7" class="outline-3">
-<h3 id="org80a9eb7"><span class="section-number-3">2.1</span> COO Arrangement</h3>
+<div id="outline-container-orgd775e7c" class="outline-3">
+<h3 id="orgd775e7c"><span class="section-number-3">2.1</span> COO Arrangement</h3>
 <div class="outline-text-3" id="text-2-1">
 
 <div class="figure">
@@ -470,9 +479,31 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
+
+<div id="outline-container-org2c09211" class="outline-2">
+<h2 id="org2c09211"><span class="section-number-2">3</span> sketch 与基因序列挖掘 贾鹏</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org6dc9ac4" class="outline-3">
+<h3 id="org6dc9ac4"><span class="section-number-3">3.1</span> GATK(Genome Analysis Toolkit)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+数据-&gt;云端计算-&gt;结果传输回来.
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200628195359.png" alt="20200628195359.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-06-21 周日 21:40</p>
+<p class="date">Date: 2020-06-28 周日 00:00</p>
+<p class="author">Author: 梁子</p>
+<p class="date">Created: 2020-06-28 周日 19:55</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

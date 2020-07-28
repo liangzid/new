@@ -1,3 +1,9 @@
+#+title: 每日的周报汇总
+#+author: 梁子
+#+date: <2020-06-28 周日>
+#+latex_class: elegantpaper
+
+
 * time series similarity measures
 <2020-06-21 周日>
 ** metric
@@ -79,4 +85,358 @@ shapelet究竟是什么东西?
 [[file:images/20200621210813.png]]
 
 [[file:images/20200621211132.png]]
+
+* sketch 与基因序列挖掘 贾鹏
+
+** GATK(Genome Analysis Toolkit)
+
+数据->云端计算->结果传输回来.
+
+[[file:./images/20200628195359.png]]
+
+** application
+
+*** 记忆组装
+把破碎且内部内容重复的序列进行拼接
+
+*** 序列相似度比对 
+通过计算序列的相似度,来探测
+
+[[file:./images/20200628201532.png]]
+
+
+层次聚类:(Hiearchical Cluster)
+
+[[file:./images/20200628201843.png]]
+
+Genome resembalance
+
+加权性质的内积"准相似度",需要考虑某个元素的频率.
+
+[[file:./images/20200628202112.png]]
+
+*** 找到一个序列在哪个数据库中Genome Containment
+主要是基于Bloom Filter进行
+
+** 寻找新的问题
+数据库中数据存在很多噪声,也就是噪声的问题.
+* SlidingSketch 李润东
+** problem
+流数据比较重视最近的item.
+通过设计一种新的数据结构来实现这个效果.
+
+最近的算法无法很好的解决这种问题.
+
+三种query: 
+** 基本概念
+*** 流数据
+序列.
+*** sliding windows(time-based)
+以时间为计算
+*** sliding windows(count-based)
+以个数进行计算
+*** membership query
+在流数据中是否存在这个查询
+*** Frequency query
+在流数据中这个查询的频率
+*** Heavy Hitter query
+这个查询是否超过了某一个频率
+** method
+*** 对目前已有之动作的总结
+ 所有的hash方式本质上都可以表示成下面所示的hash过程
+
+ [[file:./images/20200628211015.png]]
+
+ 比如:
+ 1. Bloom filter
+ 2. Count min
+*** our method
+
+[[file:./images/20200628211750.png]]
+
+1. 一个bucket包括两部分,old与new
+
+2. update 每进入一个item,都进行hash,然后再被hash的地方进行数值的更新
+
+3. scan 对所有hash得到的序列进行轮询,对每个轮询到的点:遗忘掉old里的东西,然后将new中的东西放进old里面.
+
+4. query 相加,或者其他的一些东西
+
+** proof
+
+* 异常检测 Anomaly Detection     兰林
+<2020-07-05 周日>
+
+** 什么是异常检测?
+数据中会存在一些点,这些点偏离了这大部分数据.
+
+应用:
+1. 入侵检测 Intrusion Detection
+
+2. Fraud Detection 欺诈检测
+
+3. 医疗诊断 Medical Diagnosis
+
+4. Data Stream Monitoring
+
+5. Security and Video Surveillance
+
+数据特点:
+
++ sample independent
+
++ Spatial Dependency
+
++ Temporal Dependency
+
++ Graph Dependency
+
+** challenge
+1. 无法采用有监督学习方法.
+   + 很少标注异常数据
+   + 自然界本身异常数据就少
+2. 需要去学习正常数据的一些模式(而这些数据的维度通常非常高)
+3. 对异常的定义是非常主观的,会随着应用和目标的变化而变化.
+4. 正常数据和异常数据的差距同样不是十分明确.
+
+
+** traditional Algorithm
+
+*** general Formulation
+整体如下图所示:
+
+[[file:./images/20200705195327.png]]
+
+**** learn data representation (feature extraction)
+通过使用一个map将数据映射到一个特殊的度量空间.
+
+**** detect anomaly
+定义异常值,并使用它进行异常的检测.
+
+
+*** classificaiton 
+
+**** SVM(Support Vector Machine)
+
+ principle of SVM:在某个空间里找到一条超平面,最大化两个类别之间的差距.
+
+ 使用在此处:找到一条超平面,把所有的正常数据全都放在超平面之外,正常数据都放在超平面之内,且超平面距离原点越远越好.
+
+**** SVDD Support Vector Data Description
+通过训练构造一个超平面,使得所有的正常数据都在超平面的内部.
+
+*** Distance_Based metric 
+
+**** K-Nearest Neighbor
+
+ 通过一种无监督的距离,如果一些数据类的密度比较小,则异常,比较大,则正常.
+
+密度的计算? 通过局部距离来表达.
+
+Local Outlier Factor 
+
+每个数据点到距离其距离最近的K个点的距离的平均值.
+
+[[file:./images/20200705200529.png]]
+
+[[file:./images/20200705200640.png]]
+
+*** Statistical Models
+
+直接放图
+
+[[file:./images/20200705200909.png]]
+
+** Deep Learning for Anomaly Detection 
+
+*** Deep One-class Models (Deep OC) ->  Deep SVDD 
+
+---------------------------------
+
+2017 ICML 
+
+为什么能够发在这个论文上?
+
+1. 论文分析比较多;
+2.对神经网络的优化比较细致.
+
+---------------------------------
+
+SVDD的思路是通过一个超球面将所有的正常点连接起来
+
+Deep SVDD则是通过损失函数更好地产生一个超球面.产生的方法就是,产生一个最小的超球,同时包含所有的正常的点.
+
+*** AutoEncoder
+无监督.
+
+使用正常数据对数据编码器进行训练,之后输入一个数据,并计算输入和输出之间的距离.
+
+如果距离足够小,则认为其是正常数据点,否则就是异常点.
+
+问题:容易过拟合.
+
+解决方案: 加入噪声.
+
+It is potential to build the regularizer with logic rules.
+(将逻辑规则表达成损失函数的一部分)
+
+**** 应用 Video Surveillance 摄像头的监控问题.
+  ......
+
+**** limitation of autoencoder
+
+  [[file:./images/20200705202724.png]]
+
+*** 变分自动编码器 Variational AE
+变分自动编码器的的隐函数(即隐向量)与传统的自动编码器不同.
+
+变分自动编码器的隐向量满足一个分布(比如标准正态分布),减少了数据的过拟合.
+
+变分自动编码器的分布是事先定义好的,而GAN的分布是根据数据学习的.
+
+**** 应用: fake news detection
+
+......
+
+***  GAN
+
+[[file:./images/20200705203555.png]]
+
+优势,可以学习到数据的分布,而非像VAE那样直接使用到数据的分布.
+
+*** Semi-Supervised Deep SVDD
+
+[[file:./images/20200705204250.png]]
+
+
+
+
+** 总结.
+
+[[file:./images/20200705204339.png]]
+
+
+** 讨论
+
+logic rules in NN ?
+* unsupervised multi-aspect network embedding xunuo
+
+** network
+
+*** network mining
+1. link prediction
+2. link rank
+3. community detection
+4. classificaiton
+*** representation of networks
+1. adj matrix
+
+问题：表示稀疏，维度较高，占用内存过大.
+
+2. goal
+   + 低维
+   + dense and semantic
+
+** network embedding
+
+*** classical
+
+Laplacian Eigenmap
+*** graph factorization
+
+*** Neural word embedding
+
+** Neural word embedding
+
+[[file:./images/20200712193824.png]]
+
+*** deep walk
+
+[[file:./images/20200712194142.png]]
+
+hiearchical softmax
+
+*** graphSAGE
+
+采样,聚合,更新,预测.
+
+[[file:./images/20200712194510.png]]
+
+当无监督时:
+通过"让邻域内的节点相似度大于邻域之外的"构建出损失函数.
+
+[[file:./images/20200712194627.png]]
+
+** multi-aspect network embedding
+
+*** poly Deep Walk
+
+[[file:./images/20200712194912.png]]
+
+aspect的数量是一个给定的,但是每个aspect每个被采样的节点的概率是一个先验(即独立于数据而自己存在.)
+
+
+[[file:./images/20200712195527.png]]
+
+
+*** asp2vec deep walk based
+
+
+* 逻辑 in Recommandation
+
+** collaborative Filtering
+
+1. 查看 user 与 item 的相似度问题
+
+2. 添加上下文信息的协同滤波
+
+
+问题：基于相似度匹配的协同滤波不如基于逻辑规则好用。
+
+** 逻辑规则
+
+[[file:./images/20200719203315.png]]
+
+** 使用NN演示逻辑关系
+
+* 知识图谱在表示学习中的应用 张远鸣
+
+** 应用
+
+1. 搜索引擎
+2. 智能问答
+
+** 知识图谱中实体的表示
+
+1. one-hot向量
+2. 稠密向量
+
+类似于NLP中对词向量的表示，知识图谱由离散符号变成了对连续向量的操作。
+
+** 知识图谱表示学习的目标
+*** 在知识图谱中进行间接预测
+**** 基于翻译模型
+1.基于相似度函数进行翻译；
+2.基于实体的关系表示其合理性；
+3.基于边来描述其关系
+
+基本思路：将实体看作是一个个的点，边看作是一个个的连接操作， 然后每个点都可以通过边这种平移操作移动到边所连接的另一个点。
+
+损失函数也是在这种基本思路下进行的。当然，损失函数还会考虑对负样本的处理。
+
+这里存在的问题：不同的节点可以通过相同的关系到达相同的另一个顶点。（我不觉得这是一个问题）所以，需要添加一个新的投影，通过这个投影来允许同一性。
+
+其他的想法：认为实体和关系不同处于同一空间。即不仅仅把关系理解成一种简单的平移变换，这种操作本质上就是把平移映射改变为经过了线性映射的平移变换。
+*** 基于游走路径的知识图谱
+
+*** 基于图卷积的知识图谱
+将同构图转变为异构图
+
+[[file:./images/20200726201311.png]]
+
+* Data Series Progresssive similarity search孙飞扬
+完了，没听懂。完了完了。
+
+
+
 

@@ -1,5 +1,5 @@
 # 这个中文latex转化的工具还不成熟,暂时不去使用.
-#+latex_class: cn-article
+#+latex_class: elegantpaper
 #+title: org基本使用指南
 #+author: 梁子
 #+email: 2273067585@qq.com
@@ -7,27 +7,102 @@
 这篇笔记是我用org写的，在学习org的过程中进行的一个简单的记录。
 这篇笔记里所有的内容都来自于[[https://orgmode.org/guide/][orgmode compact guide]].
 
+
+* INPROGRESS working with source code 在笔记里插入源码[%]
+org 在编辑源码,运行源码,tangling源码与导出源码上都有一些贡献.
+一般来说,一个源码都可以表现成下面的格式:
+#+NAME: <name>
+#+BEGIN_SRC <language> <switches> <header arguments>
+  <body>
+#+END_SRC
+
+其中
+  -  ‘<name>’ is a string used to uniquely name the code block,
+  -  ‘<language>’ specifies the language of the code block, e.g., ‘emacs-lisp’, ‘shell’, ‘R’, ‘python’, etc.,
+  -  ‘<switches>’ can be used to control export of the code block,
+  -  ‘<header arguments>’ can be used to control many aspects of code block behavior as demonstrated below,
+  -  ‘<body>’ contains the actual source code. 
+
+通过C-c '进行代码块的编辑，但是常常的一串呢？都需要输入吗？不是这样的。
+从[[http://wenshanren.org/?p=327][此处]]找到了一个自定义的解决方案,我觉得或许可以.
+首先,把下面的函数放入init文件中.
+
+
+#+BEGIN_SRC emacs-lisp
+  (defun org-insert-src-block (src-code-type)
+    "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
+    (interactive
+     (let ((src-code-types
+	    '("emacs-lisp" "python" "C" "sh" "java" "js" "clojure" "C++" "css"
+	      "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
+	      "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
+	      "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
+	      "scheme" "sqlite")))
+       (list (ido-completing-read "Source code type: " src-code-types))))
+    (progn
+      (newline-and-indent)
+      (insert (format "#+BEGIN_SRC %s\n" src-code-type))
+      (newline-and-indent)
+      (insert "#+END_SRC\n")
+      (previous-line 2)
+      (org-edit-src-code)))
+
+#+END_SRC
+
+
+之后，将下列快捷键绑定
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'org-mode-hook '(lambda ()
+			      ;; turn on flyspell-mode by default
+			      (flyspell-mode 1)
+			      ;; C-TAB for expanding
+			      (local-set-key (kbd "C-<tab>")
+					     'yas/expand-from-trigger-key)
+			      ;; keybinding for editing source code blocks
+			      (local-set-key (kbd "C-c s e")
+					     'org-edit-src-code)
+			      ;; keybinding for inserting code blocks
+			      (local-set-key (kbd "C-c s i")
+					     'org-insert-src-block)
+			      ))
+#+END_SRC
+
+之后，就可以通过C-c s i 快捷键插入一个代码块了。
+此处参考[[http://wenshanren.org/?p=327]]的博客。
+
+下面对几个特殊环节进行简要介绍.
+这些内容均来自于[[https://orgmode.org/guide/Working-with-Source-Code.html#Working-with-Source-Code][这里]].
+** TODO using header arguments
+** TODO evaluating code blocks
+** TODO results of evaluation
+** TODO exporting code blocks
+** TODO extracting source code
+
 * DONE introduction: a welcome of org mode
 ** 激活
 当你初次使用一个emacs,且你并没有什么配置的时候,如何从零开始配置org呢?首先,尝试将以下代码复制到init.el文件里,当然,也可以是合理的其他位置.这样做的目的是为了激活快捷键.
-```
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
-```
+
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c l") 'org-store-link)
+  (global-set-key (kbd "C-c a") 'org-agenda)
+  (global-set-key (kbd "C-c c") 'org-capture)
+#+END_SRC
+
+
 * DONE document structure 文档结构
-文档结构被认为是文档的骨架,也就是一个"书"状的层次结构.
+  文档结构被认为是文档的骨架,也就是一个"书"状的层次结构.
 ** headlines
 就是一级标题,二级标题等等.一般可以通过以下方式进行表达:
 
 
-#+BEGIN_SRC org
+# #+BEGIN_SRC org
 
-  * 一级标题
-  ** 二级标题
-  *** 三级标题
-
-#+END_SRC
+#   * 一级标题
+#   ** 二级标题
+#   *** 三级标题
+# #+END_SRC
 
 
 此外,可以通过"M-<ENTER>"键一键形成一个同等的一级标题.可以使用TAB将这个一级标题转换为一个二级标题.
@@ -35,11 +110,24 @@
 ** 在可见度上的遮盖与打开 visibility cycling
 也就是在可见度之间的一种循环.前面有所介绍.
 1. 最常用的方法是使用TAB.如:
-,-> folded FOLDED -> children CHILDREN -> subtree SUBTREE --.
-'-----------------------------------------------------------'
+
+[[file:./images/20200629171147.png]]
+
+
+#+BEGIN_SRC emacs-lisp
+
+  ,-> folded FOLDED -> children CHILDREN -> subtree SUBTREE --.
+  '-----------------------------------------------------------'
+
+#+END_SRC
+
 2. 使用S-TAB在以下场景下实现循环.
-,-> OVERVIEW -> CONTENTS -> SHOW ALL --.
-'--------------------------------------'
+
+#+BEGIN_SRC emacs-lisp
+  ,-> OVERVIEW -> CONTENTS -> SHOW ALL --.
+  '--------------------------------------'
+#+END_SRC
+
 3. 使用C-u C-u C-u TAB ,实现show all 的功能.
 4. 自定义一个org文档起始时刻应该具有的结构.
 一般而言,可以在org文档的开头这么写:
@@ -53,11 +141,11 @@
 ** 在headline之间的跳动
 有的时候,是想直接在headline之间进行跳动的.这些过程通常可以经由以下快捷键进行展示.
 值得注意的是,这些快捷键显然是C-c加上了一些独特的后缀.
-C-c C-n Next heading.从当前文本跳跃到上一个headline处,或从当前的headline跳跃到上一个headline处,而不论上一个headline是否与此处的headline同级别.你可以通过这个按钮跳跃到与光标相比最近的上一个headline处.
-C-c C-p Previous heading.类上
-C-c C-f Next heading same level 只会在同一level的headline之间跳转,并且归于他们的上级那里,出不去.
-C-c C-b provious heading same level类上
-C-c C-u backward to higher level headings.?
+1. C-c C-n Next heading.从当前文本跳跃到上一个headline处,或从当前的headline跳跃到上一个headline处,而不论上一个headline是否与此处的headline同级别.你可以通过这个按钮跳跃到与光标相比最近的上一个headline处.
+2. C-c C-p Previous heading.类上
+3. C-c C-f Next heading same level 只会在同一level的headline之间跳转,并且归于他们的上级那里,出不去.
+4. C-c C-b provious heading same level类上
+5. C-c C-u backward to higher level headings.?
 ** 结构编辑 structure editing
  结构编辑主要存在以下快捷键.
  1. M-RET 添加一个同级别的headline
@@ -107,7 +195,6 @@ C-c C-u backward to higher level headings.?
   | Anna  |  4321 |  25 |
   |       |       |     |
   |       |       |     |
-
 #+END_SRC
 
 但是,显然,可以看出,这样的表格无法进行高效的输入,因为中间那行长长的横线很烦人.解决方案通常是:当你输入了"|-"之后,直接使用TAB进行自动补充.除此之外,你也可以通过TAB形成一个新的填空.
@@ -140,29 +227,27 @@ C-c C-u backward to higher level headings.?
 首先,罗列一些典型的外部链接:
 
 #+BEGIN_SRC org
-
-  http://www.astro.uva.nl/=dominik’	on the web
-  file:/home/dominik/images/jupiter.jpg’	file, absolute path
-  /home/dominik/images/jupiter.jpg’	same as above
-  file:papers/last.pdf’	file, relative path
+  http://www.astro.uva.nl/=dominik	on the web
+  file:/home/dominik/images/jupiter.jpg	file, absolute path
+  /home/dominik/images/jupiter.jpg	same as above
+  file:papers/last.pdf	file, relative path
   ./papers/last.pdf’	same as above
-  file:projects.org’	another Org file
-  docview:papers/last.pdf::NNN’	open in DocView mode at page NNN
-  id:B7423F4D-2E8A-471B-8810-C40F074717E9’	link to heading by ID
-  news:comp.emacs’	Usenet link
-  mailto:adent@galaxy.net’	mail link
-  mhe:folder#id’	MH-E message link
-  rmail:folder#id’	Rmail message link
-  gnus:group#id’	Gnus article link
-  bbdb:R.*Stallman’	BBDB link (with regexp)
-  irc:/irc.com/#emacs/bob’	IRC link
-  info:org#Hyperlinks ’	Info node link
+  file:projects.org	another Org file
+  docview:papers/last.pdf::NNN	open in DocView mode at page NNN
+  id:B7423F4D-2E8A-471B-8810-C40F074717E9	link to heading by ID
+  news:comp.emacs	Usenet link
+  mailto:adent@galaxy.net	mail link
+  mhe:folder#id	MH-E message link
+  rmail:folder#id	Rmail message link
+  gnus:group#id	Gnus article link
+  bbdb:R.*Stallman	BBDB link (with regexp)
+  irc:/irc.com/#emacs/bob	IRC link
+  info:org#Hyperlinks 	Info node link
 
   除此之外,还有一些特殊情况,这些特殊情况包括:
-  file:~/code/main.c::255’	Find line 255
-  file:~/xx.org::My Target’	Find ‘<<My Target>>’
-  [[file:~/xx.org::#my-custom-id]]’	Find entry with a custom ID
-
+  file:~/code/main.c::255	Find line 255
+  file:~/xx.org::MyTarget	Find ‘<<My Target>>’
+  [[file:~/xx.org::#my-custom-id]]	Find entry with a custom ID
 #+END_SRC
 
 ** handling links, 处理链接
@@ -281,6 +366,9 @@ emacs里面有专门的时间记录,详细可参阅[[https://orgmode.org/guide/C
 3. M-x org-agenda M  在2的基础上,仅仅显示带有TODO标签的那些.
 
 值得注意的是,这些标签均支持布尔运算.比如使用"a+b-c"代表包含a标签并包含b标签且不包含c标签的所有匹配项.使用"x|y"代表包含x标签或包含y标签的匹配项.
+
+
+
 
 
 * DONE [#B] Properties
@@ -621,77 +709,6 @@ publishing是一种手段,将笔记转换为html等格式之后上传到博客�
 2. C-c C-e P p 发布包括当前文件的项目.
 3. C-c C-e P f 只发布当前文件.
 4. C-c C-e P a 发布所有的项目
-
-* INPROGRESS working with source code 在笔记里插入源码[%]
-org 在编辑源码,运行源码,tangling源码与导出源码上都有一些贡献.
-一般来说,一个源码都可以表现成下面的格式:
-#+NAME: <name>
-#+BEGIN_SRC <language> <switches> <header arguments>
-  <body>
-#+END_SRC
-
-其中
-  -  ‘<name>’ is a string used to uniquely name the code block,
-  -  ‘<language>’ specifies the language of the code block, e.g., ‘emacs-lisp’, ‘shell’, ‘R’, ‘python’, etc.,
-  -  ‘<switches>’ can be used to control export of the code block,
-  -  ‘<header arguments>’ can be used to control many aspects of code block behavior as demonstrated below,
-  -  ‘<body>’ contains the actual source code. 
-
-通过C-c '进行代码块的编辑，但是常常的一串呢？都需要输入吗？不是这样的。
-从[[http://wenshanren.org/?p=327][此处]]找到了一个自定义的解决方案,我觉得或许可以.
-首先,把下面的函数放入init文件中.
-
-
-#+BEGIN_SRC emacs-lisp
-  (defun org-insert-src-block (src-code-type)
-    "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
-    (interactive
-     (let ((src-code-types
-	    '("emacs-lisp" "python" "C" "sh" "java" "js" "clojure" "C++" "css"
-	      "calc" "asymptote" "dot" "gnuplot" "ledger" "lilypond" "mscgen"
-	      "octave" "oz" "plantuml" "R" "sass" "screen" "sql" "awk" "ditaa"
-	      "haskell" "latex" "lisp" "matlab" "ocaml" "org" "perl" "ruby"
-	      "scheme" "sqlite")))
-       (list (ido-completing-read "Source code type: " src-code-types))))
-    (progn
-      (newline-and-indent)
-      (insert (format "#+BEGIN_SRC %s\n" src-code-type))
-      (newline-and-indent)
-      (insert "#+END_SRC\n")
-      (previous-line 2)
-      (org-edit-src-code)))
-
-#+END_SRC
-
-
-之后，将下列快捷键绑定
-
-#+BEGIN_SRC emacs-lisp
-  (add-hook 'org-mode-hook '(lambda ()
-			      ;; turn on flyspell-mode by default
-			      (flyspell-mode 1)
-			      ;; C-TAB for expanding
-			      (local-set-key (kbd "C-<tab>")
-					     'yas/expand-from-trigger-key)
-			      ;; keybinding for editing source code blocks
-			      (local-set-key (kbd "C-c s e")
-					     'org-edit-src-code)
-			      ;; keybinding for inserting code blocks
-			      (local-set-key (kbd "C-c s i")
-					     'org-insert-src-block)
-			      ))
-#+END_SRC
-
-之后，就可以通过C-c s i 快捷键插入一个代码块了。
-此处参考[[http://wenshanren.org/?p=327]]的博客。
-
-下面对几个特殊环节进行简要介绍.
-这些内容均来自于[[https://orgmode.org/guide/Working-with-Source-Code.html#Working-with-Source-Code][这里]].
-** TODO using header arguments
-** TODO evaluating code blocks
-** TODO results of evaluation
-** TODO exporting code blocks
-** TODO extracting source code
 
 * TODO miscellaneous 
 
