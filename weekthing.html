@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-06-28 周日 19:55 -->
+<!-- 2020-09-13 周日 20:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>每日的周报汇总</title>
@@ -234,35 +234,202 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2b7a6a6">1. time series similarity measures</a>
+<li><a href="#orgce8f2da">1. time series similarity measures</a>
 <ul>
-<li><a href="#org14514c0">1.1. metric</a>
+<li><a href="#org50f378f">1.1. metric</a>
 <ul>
-<li><a href="#orgc6d3496">1.1.1. euclidean distance</a></li>
-<li><a href="#org606822e">1.1.2. DTW (Dynamic Time Warping)</a></li>
+<li><a href="#org51d6c6f">1.1.1. euclidean distance</a></li>
+<li><a href="#org2f103b5">1.1.2. DTW (Dynamic Time Warping)</a></li>
 </ul>
 </li>
-<li><a href="#org791560b">1.2. search method</a>
+<li><a href="#org001a484">1.2. search method</a>
 <ul>
-<li><a href="#orgc1e54de">1.2.1. UCR Suite</a></li>
-<li><a href="#org7c87c2a">1.2.2. SSH 近似序列搜索</a></li>
-<li><a href="#org36c2590">1.2.3. clustering subsequences</a></li>
-<li><a href="#org9d692b3">1.2.4. 一点点疑问</a></li>
-<li><a href="#org92d2daa">1.2.5. Use Matrix Profile</a></li>
-<li><a href="#org3f12f4a">1.2.6. progressive similarity search</a></li>
-<li><a href="#org642398f">1.2.7. 对带高频噪声的时间序列的处理</a></li>
+<li><a href="#orgb1fabd7">1.2.1. UCR Suite</a></li>
+<li><a href="#orgaf33ff8">1.2.2. SSH 近似序列搜索</a></li>
+<li><a href="#org1643f07">1.2.3. clustering subsequences</a></li>
+<li><a href="#orgba6eff5">1.2.4. 一点点疑问</a></li>
+<li><a href="#org7459b31">1.2.5. Use Matrix Profile</a></li>
+<li><a href="#org60fb57a">1.2.6. progressive similarity search</a></li>
+<li><a href="#org98a4fd9">1.2.7. 对带高频噪声的时间序列的处理</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org72ea978">2. self-similarity ICML2019</a>
+<li><a href="#orgd838ed4">2. self-similarity ICML2019</a>
 <ul>
-<li><a href="#orgd775e7c">2.1. COO Arrangement</a></li>
+<li><a href="#orgcb53e7c">2.1. COO Arrangement</a></li>
 </ul>
 </li>
-<li><a href="#org2c09211">3. sketch 与基因序列挖掘 贾鹏</a>
+<li><a href="#org0dfea7e">3. sketch 与基因序列挖掘 贾鹏</a>
 <ul>
-<li><a href="#org6dc9ac4">3.1. GATK(Genome Analysis Toolkit)</a></li>
+<li><a href="#org2baee3e">3.1. GATK(Genome Analysis Toolkit)</a></li>
+<li><a href="#org69739eb">3.2. application</a>
+<ul>
+<li><a href="#orge49aa00">3.2.1. 记忆组装</a></li>
+<li><a href="#org6365c17">3.2.2. 序列相似度比对</a></li>
+<li><a href="#orgee1e0e6">3.2.3. 找到一个序列在哪个数据库中Genome Containment</a></li>
+</ul>
+</li>
+<li><a href="#org8a3b642">3.3. 寻找新的问题</a></li>
+</ul>
+</li>
+<li><a href="#org8b0e8ed">4. SlidingSketch 李润东</a>
+<ul>
+<li><a href="#org35f1b45">4.1. problem</a></li>
+<li><a href="#orga36f133">4.2. 基本概念</a>
+<ul>
+<li><a href="#org5d68414">4.2.1. 流数据</a></li>
+<li><a href="#org94cd553">4.2.2. sliding windows(time-based)</a></li>
+<li><a href="#org8a21ad7">4.2.3. sliding windows(count-based)</a></li>
+<li><a href="#orgcde5541">4.2.4. membership query</a></li>
+<li><a href="#org1e8acad">4.2.5. Frequency query</a></li>
+<li><a href="#orgab8afff">4.2.6. Heavy Hitter query</a></li>
+</ul>
+</li>
+<li><a href="#orgc5d7478">4.3. method</a>
+<ul>
+<li><a href="#org60a49f6">4.3.1. 对目前已有之动作的总结</a></li>
+<li><a href="#org7ca3e71">4.3.2. our method</a></li>
+</ul>
+</li>
+<li><a href="#org1880b97">4.4. proof</a></li>
+</ul>
+</li>
+<li><a href="#orgf47a527">5. 异常检测 Anomaly Detection     兰林</a>
+<ul>
+<li><a href="#org63993ed">5.1. 什么是异常检测?</a></li>
+<li><a href="#org11c8bae">5.2. challenge</a></li>
+<li><a href="#org3f60c8f">5.3. traditional Algorithm</a>
+<ul>
+<li><a href="#orgda43ca5">5.3.1. general Formulation</a></li>
+<li><a href="#org826eb5f">5.3.2. classificaiton</a></li>
+<li><a href="#org23f4240">5.3.3. Distance_Based metric</a></li>
+<li><a href="#org15bdce6">5.3.4. Statistical Models</a></li>
+</ul>
+</li>
+<li><a href="#orgc6d7c2f">5.4. Deep Learning for Anomaly Detection</a>
+<ul>
+<li><a href="#org224c167">5.4.1. Deep One-class Models (Deep OC) -&gt;  Deep SVDD</a></li>
+<li><a href="#org760bce8">5.4.2. AutoEncoder</a></li>
+<li><a href="#orgcc366c7">5.4.3. 变分自动编码器 Variational AE</a></li>
+<li><a href="#org8fbf9a7">5.4.4. GAN</a></li>
+<li><a href="#orgaf18e6c">5.4.5. Semi-Supervised Deep SVDD</a></li>
+</ul>
+</li>
+<li><a href="#org6473db1">5.5. 总结.</a></li>
+<li><a href="#org10000c4">5.6. 讨论</a></li>
+</ul>
+</li>
+<li><a href="#orga71e5bd">6. unsupervised multi-aspect network embedding xunuo</a>
+<ul>
+<li><a href="#orge292e8f">6.1. network</a>
+<ul>
+<li><a href="#org17abc2b">6.1.1. network mining</a></li>
+<li><a href="#orgbe3866b">6.1.2. representation of networks</a></li>
+</ul>
+</li>
+<li><a href="#org6760ecf">6.2. network embedding</a>
+<ul>
+<li><a href="#orgdd38f1b">6.2.1. classical</a></li>
+<li><a href="#orgf7ffba7">6.2.2. graph factorization</a></li>
+<li><a href="#org7bfda63">6.2.3. Neural word embedding</a></li>
+</ul>
+</li>
+<li><a href="#org83c965f">6.3. Neural word embedding</a>
+<ul>
+<li><a href="#org9e3f0f9">6.3.1. deep walk</a></li>
+<li><a href="#org8ff0687">6.3.2. graphSAGE</a></li>
+</ul>
+</li>
+<li><a href="#orgc4c54a1">6.4. multi-aspect network embedding</a>
+<ul>
+<li><a href="#org42117c3">6.4.1. poly Deep Walk</a></li>
+<li><a href="#org8b2eb8e">6.4.2. asp2vec deep walk based</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga6d7a8f">7. 逻辑 in Recommandation</a>
+<ul>
+<li><a href="#org7a7b98e">7.1. collaborative Filtering</a></li>
+<li><a href="#orga3192ac">7.2. 逻辑规则</a></li>
+<li><a href="#orgb5cf61a">7.3. 使用NN演示逻辑关系</a></li>
+</ul>
+</li>
+<li><a href="#org214af30">8. 知识图谱在表示学习中的应用 张远鸣</a>
+<ul>
+<li><a href="#orgba691ea">8.1. 应用</a></li>
+<li><a href="#org79ff5e0">8.2. 知识图谱中实体的表示</a></li>
+<li><a href="#org2cba2a0">8.3. 知识图谱表示学习的目标</a>
+<ul>
+<li><a href="#org97f5ea2">8.3.1. 在知识图谱中进行间接预测</a></li>
+<li><a href="#org7d94745">8.3.2. 基于游走路径的知识图谱</a></li>
+<li><a href="#org4490c43">8.3.3. 基于图卷积的知识图谱</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgddfaa6a">9. Data Series Progresssive similarity search孙飞扬</a></li>
+<li><a href="#orge3055dc">10. 图神经网络在知识图谱中的应用</a></li>
+<li><a href="#orgfdf9e9c">11. 马尔可夫逻辑网络</a></li>
+<li><a href="#orgd017f0a">12. [没讲]大规模分类场景下的数据挖掘 梁子</a>
+<ul>
+<li><a href="#orgfd72f34">12.1. 论文阅读</a>
+<ul>
+<li><a href="#org547f582">12.1.1. Multilabel Classification by Hiearchical Partitioning and Data-dependent Grouping</a></li>
+<li><a href="#orgeae261e">12.1.2. Bonsai(盆景) - Diverse(多样化) and Shallow Trees for Extreme Multi-label Classification</a></li>
+<li><a href="#org5e3bc31">12.1.3. Fast Training for Large-Scale One-versus-All Linear Classifiers using Tree-Structured Initialization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5f5f1cb">13. 基于生物启发的局部敏感哈希 李润东学长</a>
+<ul>
+<li><a href="#orgd61472b">13.1. 基于果蝇的hash</a></li>
+<li><a href="#orgee0d3ce">13.2. flyhash</a></li>
+</ul>
+</li>
+<li><a href="#org33061e9">14. 知识蒸馏 雷润泽</a>
+<ul>
+<li><a href="#org81944c6">14.1. fitNet</a></li>
+<li><a href="#org7a2dfd5">14.2. attention map learning</a></li>
+<li><a href="#org89469e4">14.3. rocket launching</a></li>
+<li><a href="#org4a072f1">14.4. FSP Matrix</a></li>
+<li><a href="#org29e777a">14.5. instance Relationship Graph</a></li>
+<li><a href="#org827dcbd">14.6. 在线蒸馏 Deep Mutual Learning</a></li>
+<li><a href="#org6964ccc">14.7. self distillation</a></li>
+<li><a href="#orgca055d9">14.8. model quantization</a></li>
+</ul>
+</li>
+<li><a href="#org9db7a3f">15. online learning 梁子</a></li>
+<li><a href="#org5e83174">16. 多跳下的开放域问答          ICLR2020 CMU+GOOGLE  张远鸣</a>
+<ul>
+<li><a href="#orgd656319">16.1. 知识图谱问答（KGQA）</a></li>
+<li><a href="#org2946fa6">16.2. 相关工作</a></li>
+<li><a href="#org4609b5f">16.3. 本文贡献</a></li>
+</ul>
+</li>
+<li><a href="#org0d56c98">17. adversarial Attack in Graph data.</a>
+<ul>
+<li><a href="#orgf5f4346">17.1. motivation</a></li>
+<li><a href="#orge5d0267">17.2. challenge</a></li>
+<li><a href="#orgfb536fc">17.3. attack strategy</a></li>
+<li><a href="#org9251722">17.4. attack stage</a></li>
+<li><a href="#orgbdf4539">17.5. assumption of attackers</a>
+<ul>
+<li><a href="#org90f811f">17.5.1. 观察者对模型的了解程度</a></li>
+<li><a href="#org0ac5c0f">17.5.2. 观察者对数据集的了解程度</a></li>
+</ul>
+</li>
+<li><a href="#org7b72660">17.6. application</a></li>
+<li><a href="#orge8b8017">17.7. some papers</a>
+<ul>
+<li><a href="#org0acf429">17.7.1. node classification KDD2018</a></li>
+<li><a href="#orgfbe3a43">17.7.2. ICML 2018</a></li>
+<li><a href="#org4db21e0">17.7.3. community detection arxiv 2019</a></li>
+</ul>
+</li>
+<li><a href="#orgbea7f3e">17.8. future</a></li>
 </ul>
 </li>
 </ul>
@@ -270,19 +437,19 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org2b7a6a6" class="outline-2">
-<h2 id="org2b7a6a6"><span class="section-number-2">1</span> time series similarity measures</h2>
+<div id="outline-container-orgce8f2da" class="outline-2">
+<h2 id="orgce8f2da"><span class="section-number-2">1</span> time series similarity measures</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
 </p>
 </div>
-<div id="outline-container-org14514c0" class="outline-3">
-<h3 id="org14514c0"><span class="section-number-3">1.1</span> metric</h3>
+<div id="outline-container-org50f378f" class="outline-3">
+<h3 id="org50f378f"><span class="section-number-3">1.1</span> metric</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgc6d3496" class="outline-4">
-<h4 id="orgc6d3496"><span class="section-number-4">1.1.1</span> euclidean distance</h4>
+<div id="outline-container-org51d6c6f" class="outline-4">
+<h4 id="org51d6c6f"><span class="section-number-4">1.1.1</span> euclidean distance</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 lve.
@@ -290,8 +457,8 @@ lve.
 </p>
 </div>
 </div>
-<div id="outline-container-org606822e" class="outline-4">
-<h4 id="org606822e"><span class="section-number-4">1.1.2</span> DTW (Dynamic Time Warping)</h4>
+<div id="outline-container-org2f103b5" class="outline-4">
+<h4 id="org2f103b5"><span class="section-number-4">1.1.2</span> DTW (Dynamic Time Warping)</h4>
 <div class="outline-text-4" id="text-1-1-2">
 
 <div class="figure">
@@ -311,12 +478,12 @@ UCR Suite
 </div>
 </div>
 
-<div id="outline-container-org791560b" class="outline-3">
-<h3 id="org791560b"><span class="section-number-3">1.2</span> search method</h3>
+<div id="outline-container-org001a484" class="outline-3">
+<h3 id="org001a484"><span class="section-number-3">1.2</span> search method</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orgc1e54de" class="outline-4">
-<h4 id="orgc1e54de"><span class="section-number-4">1.2.1</span> UCR Suite</h4>
+<div id="outline-container-orgb1fabd7" class="outline-4">
+<h4 id="orgb1fabd7"><span class="section-number-4">1.2.1</span> UCR Suite</h4>
 <div class="outline-text-4" id="text-1-2-1">
 
 <div class="figure">
@@ -346,8 +513,8 @@ sfy：只考虑时间序列，没有考虑“语音识别”这种特殊的语�
 </div>
 </div>
 
-<div id="outline-container-org7c87c2a" class="outline-4">
-<h4 id="org7c87c2a"><span class="section-number-4">1.2.2</span> SSH 近似序列搜索</h4>
+<div id="outline-container-orgaf33ff8" class="outline-4">
+<h4 id="orgaf33ff8"><span class="section-number-4">1.2.2</span> SSH 近似序列搜索</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 <a href="images/20200621200911.png ">images/20200621200911.png </a>
@@ -389,8 +556,8 @@ sfy:也有这种思路,但是没有这么做的.
 </div>
 </div>
 
-<div id="outline-container-org36c2590" class="outline-4">
-<h4 id="org36c2590"><span class="section-number-4">1.2.3</span> clustering subsequences</h4>
+<div id="outline-container-org1643f07" class="outline-4">
+<h4 id="org1643f07"><span class="section-number-4">1.2.3</span> clustering subsequences</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 没有特别听明白,天呢.
@@ -405,8 +572,8 @@ sfy:也有这种思路,但是没有这么做的.
 </div>
 
 
-<div id="outline-container-org9d692b3" class="outline-4">
-<h4 id="org9d692b3"><span class="section-number-4">1.2.4</span> 一点点疑问</h4>
+<div id="outline-container-orgba6eff5" class="outline-4">
+<h4 id="orgba6eff5"><span class="section-number-4">1.2.4</span> 一点点疑问</h4>
 <div class="outline-text-4" id="text-1-2-4">
 <p>
 究竟啥是random walk啊!
@@ -414,16 +581,16 @@ shapelet究竟是什么东西?
 </p>
 </div>
 </div>
-<div id="outline-container-org92d2daa" class="outline-4">
-<h4 id="org92d2daa"><span class="section-number-4">1.2.5</span> Use Matrix Profile</h4>
+<div id="outline-container-org7459b31" class="outline-4">
+<h4 id="org7459b31"><span class="section-number-4">1.2.5</span> Use Matrix Profile</h4>
 <div class="outline-text-4" id="text-1-2-5">
 <p>
 对序列切割成若干个子序列,然后计算子序列之间彼此的欧氏距离
 </p>
 </div>
 </div>
-<div id="outline-container-org3f12f4a" class="outline-4">
-<h4 id="org3f12f4a"><span class="section-number-4">1.2.6</span> progressive similarity search</h4>
+<div id="outline-container-org60fb57a" class="outline-4">
+<h4 id="org60fb57a"><span class="section-number-4">1.2.6</span> progressive similarity search</h4>
 <div class="outline-text-4" id="text-1-2-6">
 
 <div class="figure">
@@ -432,8 +599,8 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
-<div id="outline-container-org642398f" class="outline-4">
-<h4 id="org642398f"><span class="section-number-4">1.2.7</span> 对带高频噪声的时间序列的处理</h4>
+<div id="outline-container-org98a4fd9" class="outline-4">
+<h4 id="org98a4fd9"><span class="section-number-4">1.2.7</span> 对带高频噪声的时间序列的处理</h4>
 <div class="outline-text-4" id="text-1-2-7">
 <p>
 小波变换&rarr; 指纹&rarr; 计算
@@ -448,16 +615,16 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
-<div id="outline-container-org72ea978" class="outline-2">
-<h2 id="org72ea978"><span class="section-number-2">2</span> self-similarity ICML2019</h2>
+<div id="outline-container-orgd838ed4" class="outline-2">
+<h2 id="orgd838ed4"><span class="section-number-2">2</span> self-similarity ICML2019</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-06-21 周日&gt;</span></span>
 如何为SGD挑选合适的数据点,使得模型尽快收敛.
 </p>
 </div>
-<div id="outline-container-orgd775e7c" class="outline-3">
-<h3 id="orgd775e7c"><span class="section-number-3">2.1</span> COO Arrangement</h3>
+<div id="outline-container-orgcb53e7c" class="outline-3">
+<h3 id="orgcb53e7c"><span class="section-number-3">2.1</span> COO Arrangement</h3>
 <div class="outline-text-3" id="text-2-1">
 
 <div class="figure">
@@ -480,12 +647,12 @@ shapelet究竟是什么东西?
 </div>
 </div>
 
-<div id="outline-container-org2c09211" class="outline-2">
-<h2 id="org2c09211"><span class="section-number-2">3</span> sketch 与基因序列挖掘 贾鹏</h2>
+<div id="outline-container-org0dfea7e" class="outline-2">
+<h2 id="org0dfea7e"><span class="section-number-2">3</span> sketch 与基因序列挖掘 贾鹏</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org6dc9ac4" class="outline-3">
-<h3 id="org6dc9ac4"><span class="section-number-3">3.1</span> GATK(Genome Analysis Toolkit)</h3>
+<div id="outline-container-org2baee3e" class="outline-3">
+<h3 id="org2baee3e"><span class="section-number-3">3.1</span> GATK(Genome Analysis Toolkit)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 数据-&gt;云端计算-&gt;结果传输回来.
@@ -498,12 +665,1525 @@ shapelet究竟是什么东西?
 </div>
 </div>
 </div>
+
+<div id="outline-container-org69739eb" class="outline-3">
+<h3 id="org69739eb"><span class="section-number-3">3.2</span> application</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orge49aa00" class="outline-4">
+<h4 id="orge49aa00"><span class="section-number-4">3.2.1</span> 记忆组装</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+把破碎且内部内容重复的序列进行拼接
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6365c17" class="outline-4">
+<h4 id="org6365c17"><span class="section-number-4">3.2.2</span> 序列相似度比对</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+通过计算序列的相似度,来探测
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200628201532.png" alt="20200628201532.png" />
+</p>
+</div>
+
+
+<p>
+层次聚类:(Hiearchical Cluster)
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200628201843.png" alt="20200628201843.png" />
+</p>
+</div>
+
+<p>
+Genome resembalance
+</p>
+
+<p>
+加权性质的内积"准相似度",需要考虑某个元素的频率.
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200628202112.png" alt="20200628202112.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee1e0e6" class="outline-4">
+<h4 id="orgee1e0e6"><span class="section-number-4">3.2.3</span> 找到一个序列在哪个数据库中Genome Containment</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+主要是基于Bloom Filter进行
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a3b642" class="outline-3">
+<h3 id="org8a3b642"><span class="section-number-3">3.3</span> 寻找新的问题</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+数据库中数据存在很多噪声,也就是噪声的问题.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8b0e8ed" class="outline-2">
+<h2 id="org8b0e8ed"><span class="section-number-2">4</span> SlidingSketch 李润东</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org35f1b45" class="outline-3">
+<h3 id="org35f1b45"><span class="section-number-3">4.1</span> problem</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+流数据比较重视最近的item.
+通过设计一种新的数据结构来实现这个效果.
+</p>
+
+<p>
+最近的算法无法很好的解决这种问题.
+</p>
+
+<p>
+三种query: 
+</p>
+</div>
+</div>
+<div id="outline-container-orga36f133" class="outline-3">
+<h3 id="orga36f133"><span class="section-number-3">4.2</span> 基本概念</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org5d68414" class="outline-4">
+<h4 id="org5d68414"><span class="section-number-4">4.2.1</span> 流数据</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+序列.
+</p>
+</div>
+</div>
+<div id="outline-container-org94cd553" class="outline-4">
+<h4 id="org94cd553"><span class="section-number-4">4.2.2</span> sliding windows(time-based)</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+以时间为计算
+</p>
+</div>
+</div>
+<div id="outline-container-org8a21ad7" class="outline-4">
+<h4 id="org8a21ad7"><span class="section-number-4">4.2.3</span> sliding windows(count-based)</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+以个数进行计算
+</p>
+</div>
+</div>
+<div id="outline-container-orgcde5541" class="outline-4">
+<h4 id="orgcde5541"><span class="section-number-4">4.2.4</span> membership query</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+在流数据中是否存在这个查询
+</p>
+</div>
+</div>
+<div id="outline-container-org1e8acad" class="outline-4">
+<h4 id="org1e8acad"><span class="section-number-4">4.2.5</span> Frequency query</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+在流数据中这个查询的频率
+</p>
+</div>
+</div>
+<div id="outline-container-orgab8afff" class="outline-4">
+<h4 id="orgab8afff"><span class="section-number-4">4.2.6</span> Heavy Hitter query</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<p>
+这个查询是否超过了某一个频率
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc5d7478" class="outline-3">
+<h3 id="orgc5d7478"><span class="section-number-3">4.3</span> method</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org60a49f6" class="outline-4">
+<h4 id="org60a49f6"><span class="section-number-4">4.3.1</span> 对目前已有之动作的总结</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+所有的hash方式本质上都可以表示成下面所示的hash过程
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200628211015.png" alt="20200628211015.png" />
+</p>
+</div>
+
+<p>
+比如:
+</p>
+<ol class="org-ol">
+<li>Bloom filter</li>
+<li>Count min</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7ca3e71" class="outline-4">
+<h4 id="org7ca3e71"><span class="section-number-4">4.3.2</span> our method</h4>
+<div class="outline-text-4" id="text-4-3-2">
+
+<div class="figure">
+<p><img src="./images/20200628211750.png" alt="20200628211750.png" />
+</p>
+</div>
+
+<ol class="org-ol">
+<li>一个bucket包括两部分,old与new</li>
+
+<li>update 每进入一个item,都进行hash,然后再被hash的地方进行数值的更新</li>
+
+<li>scan 对所有hash得到的序列进行轮询,对每个轮询到的点:遗忘掉old里的东西,然后将new中的东西放进old里面.</li>
+
+<li>query 相加,或者其他的一些东西</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1880b97" class="outline-3">
+<h3 id="org1880b97"><span class="section-number-3">4.4</span> proof</h3>
+</div>
+</div>
+
+<div id="outline-container-orgf47a527" class="outline-2">
+<h2 id="orgf47a527"><span class="section-number-2">5</span> 异常检测 Anomaly Detection     兰林</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-07-05 周日&gt;</span></span>
+</p>
+</div>
+
+<div id="outline-container-org63993ed" class="outline-3">
+<h3 id="org63993ed"><span class="section-number-3">5.1</span> 什么是异常检测?</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+数据中会存在一些点,这些点偏离了这大部分数据.
+</p>
+
+<p>
+应用:
+</p>
+<ol class="org-ol">
+<li>入侵检测 Intrusion Detection</li>
+
+<li>Fraud Detection 欺诈检测</li>
+
+<li>医疗诊断 Medical Diagnosis</li>
+
+<li>Data Stream Monitoring</li>
+
+<li>Security and Video Surveillance</li>
+</ol>
+
+<p>
+数据特点:
+</p>
+
+<ul class="org-ul">
+<li>sample independent</li>
+
+<li>Spatial Dependency</li>
+
+<li>Temporal Dependency</li>
+
+<li>Graph Dependency</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org11c8bae" class="outline-3">
+<h3 id="org11c8bae"><span class="section-number-3">5.2</span> challenge</h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li>无法采用有监督学习方法.
+<ul class="org-ul">
+<li>很少标注异常数据</li>
+<li>自然界本身异常数据就少</li>
+</ul></li>
+<li>需要去学习正常数据的一些模式(而这些数据的维度通常非常高)</li>
+<li>对异常的定义是非常主观的,会随着应用和目标的变化而变化.</li>
+<li>正常数据和异常数据的差距同样不是十分明确.</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org3f60c8f" class="outline-3">
+<h3 id="org3f60c8f"><span class="section-number-3">5.3</span> traditional Algorithm</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orgda43ca5" class="outline-4">
+<h4 id="orgda43ca5"><span class="section-number-4">5.3.1</span> general Formulation</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+整体如下图所示:
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200705195327.png" alt="20200705195327.png" />
+</p>
+</div>
+</div>
+
+<ol class="org-ol">
+<li><a id="org7244489"></a>learn data representation (feature extraction)<br />
+<div class="outline-text-5" id="text-5-3-1-1">
+<p>
+通过使用一个map将数据映射到一个特殊的度量空间.
+</p>
+</div>
+</li>
+
+<li><a id="org0b5514d"></a>detect anomaly<br />
+<div class="outline-text-5" id="text-5-3-1-2">
+<p>
+定义异常值,并使用它进行异常的检测.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org826eb5f" class="outline-4">
+<h4 id="org826eb5f"><span class="section-number-4">5.3.2</span> classificaiton</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6d5a9e4"></a>SVM(Support Vector Machine)<br />
+<div class="outline-text-5" id="text-5-3-2-1">
+<p>
+principle of SVM:在某个空间里找到一条超平面,最大化两个类别之间的差距.
+</p>
+
+<p>
+使用在此处:找到一条超平面,把所有的正常数据全都放在超平面之外,正常数据都放在超平面之内,且超平面距离原点越远越好.
+</p>
+</div>
+</li>
+
+<li><a id="org8d67861"></a>SVDD Support Vector Data Description<br />
+<div class="outline-text-5" id="text-5-3-2-2">
+<p>
+通过训练构造一个超平面,使得所有的正常数据都在超平面的内部.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org23f4240" class="outline-4">
+<h4 id="org23f4240"><span class="section-number-4">5.3.3</span> Distance_Based metric</h4>
+<div class="outline-text-4" id="text-5-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org907694b"></a>K-Nearest Neighbor<br />
+<div class="outline-text-5" id="text-5-3-3-1">
+<p>
+通过一种无监督的距离,如果一些数据类的密度比较小,则异常,比较大,则正常.
+</p>
+
+<p>
+密度的计算? 通过局部距离来表达.
+</p>
+
+<p>
+Local Outlier Factor 
+</p>
+
+<p>
+每个数据点到距离其距离最近的K个点的距离的平均值.
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200705200529.png" alt="20200705200529.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./images/20200705200640.png" alt="20200705200640.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org15bdce6" class="outline-4">
+<h4 id="org15bdce6"><span class="section-number-4">5.3.4</span> Statistical Models</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<p>
+直接放图
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200705200909.png" alt="20200705200909.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc6d7c2f" class="outline-3">
+<h3 id="orgc6d7c2f"><span class="section-number-3">5.4</span> Deep Learning for Anomaly Detection</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org224c167" class="outline-4">
+<h4 id="org224c167"><span class="section-number-4">5.4.1</span> Deep One-class Models (Deep OC) -&gt;  Deep SVDD</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<hr />
+
+<p>
+2017 ICML 
+</p>
+
+<p>
+为什么能够发在这个论文上?
+</p>
+
+<ol class="org-ol">
+<li>论文分析比较多;</li>
+</ol>
+<p>
+2.对神经网络的优化比较细致.
+</p>
+
+<hr />
+
+<p>
+SVDD的思路是通过一个超球面将所有的正常点连接起来
+</p>
+
+<p>
+Deep SVDD则是通过损失函数更好地产生一个超球面.产生的方法就是,产生一个最小的超球,同时包含所有的正常的点.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org760bce8" class="outline-4">
+<h4 id="org760bce8"><span class="section-number-4">5.4.2</span> AutoEncoder</h4>
+<div class="outline-text-4" id="text-5-4-2">
+<p>
+无监督.
+</p>
+
+<p>
+使用正常数据对数据编码器进行训练,之后输入一个数据,并计算输入和输出之间的距离.
+</p>
+
+<p>
+如果距离足够小,则认为其是正常数据点,否则就是异常点.
+</p>
+
+<p>
+问题:容易过拟合.
+</p>
+
+<p>
+解决方案: 加入噪声.
+</p>
+
+<p>
+It is potential to build the regularizer with logic rules.
+(将逻辑规则表达成损失函数的一部分)
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge30cb9e"></a>应用 Video Surveillance 摄像头的监控问题.<br />
+<div class="outline-text-5" id="text-5-4-2-1">
+<p>
+&#x2026;&#x2026;
+</p>
+</div>
+</li>
+
+<li><a id="orga6b4621"></a>limitation of autoencoder<br />
+<div class="outline-text-5" id="text-5-4-2-2">
+
+<div class="figure">
+<p><img src="./images/20200705202724.png" alt="20200705202724.png" />
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgcc366c7" class="outline-4">
+<h4 id="orgcc366c7"><span class="section-number-4">5.4.3</span> 变分自动编码器 Variational AE</h4>
+<div class="outline-text-4" id="text-5-4-3">
+<p>
+变分自动编码器的的隐函数(即隐向量)与传统的自动编码器不同.
+</p>
+
+<p>
+变分自动编码器的隐向量满足一个分布(比如标准正态分布),减少了数据的过拟合.
+</p>
+
+<p>
+变分自动编码器的分布是事先定义好的,而GAN的分布是根据数据学习的.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orga73301c"></a>应用: fake news detection<br />
+<div class="outline-text-5" id="text-5-4-3-1">
+<p>
+&#x2026;&#x2026;
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org8fbf9a7" class="outline-4">
+<h4 id="org8fbf9a7"><span class="section-number-4">5.4.4</span> GAN</h4>
+<div class="outline-text-4" id="text-5-4-4">
+
+<div class="figure">
+<p><img src="./images/20200705203555.png" alt="20200705203555.png" />
+</p>
+</div>
+
+<p>
+优势,可以学习到数据的分布,而非像VAE那样直接使用到数据的分布.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf18e6c" class="outline-4">
+<h4 id="orgaf18e6c"><span class="section-number-4">5.4.5</span> Semi-Supervised Deep SVDD</h4>
+<div class="outline-text-4" id="text-5-4-5">
+
+<div class="figure">
+<p><img src="./images/20200705204250.png" alt="20200705204250.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org6473db1" class="outline-3">
+<h3 id="org6473db1"><span class="section-number-3">5.5</span> 总结.</h3>
+<div class="outline-text-3" id="text-5-5">
+
+<div class="figure">
+<p><img src="./images/20200705204339.png" alt="20200705204339.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org10000c4" class="outline-3">
+<h3 id="org10000c4"><span class="section-number-3">5.6</span> 讨论</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+logic rules in NN ?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga71e5bd" class="outline-2">
+<h2 id="orga71e5bd"><span class="section-number-2">6</span> unsupervised multi-aspect network embedding xunuo</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge292e8f" class="outline-3">
+<h3 id="orge292e8f"><span class="section-number-3">6.1</span> network</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org17abc2b" class="outline-4">
+<h4 id="org17abc2b"><span class="section-number-4">6.1.1</span> network mining</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ol class="org-ol">
+<li>link prediction</li>
+<li>link rank</li>
+<li>community detection</li>
+<li>classificaiton</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbe3866b" class="outline-4">
+<h4 id="orgbe3866b"><span class="section-number-4">6.1.2</span> representation of networks</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<ol class="org-ol">
+<li>adj matrix</li>
+</ol>
+
+<p>
+问题：表示稀疏，维度较高，占用内存过大.
+</p>
+
+<ol class="org-ol">
+<li>goal
+<ul class="org-ul">
+<li>低维</li>
+<li>dense and semantic</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6760ecf" class="outline-3">
+<h3 id="org6760ecf"><span class="section-number-3">6.2</span> network embedding</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-orgdd38f1b" class="outline-4">
+<h4 id="orgdd38f1b"><span class="section-number-4">6.2.1</span> classical</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+Laplacian Eigenmap
+</p>
+</div>
+</div>
+<div id="outline-container-orgf7ffba7" class="outline-4">
+<h4 id="orgf7ffba7"><span class="section-number-4">6.2.2</span> graph factorization</h4>
+</div>
+
+<div id="outline-container-org7bfda63" class="outline-4">
+<h4 id="org7bfda63"><span class="section-number-4">6.2.3</span> Neural word embedding</h4>
+</div>
+</div>
+
+<div id="outline-container-org83c965f" class="outline-3">
+<h3 id="org83c965f"><span class="section-number-3">6.3</span> Neural word embedding</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<div class="figure">
+<p><img src="./images/20200712193824.png" alt="20200712193824.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e3f0f9" class="outline-4">
+<h4 id="org9e3f0f9"><span class="section-number-4">6.3.1</span> deep walk</h4>
+<div class="outline-text-4" id="text-6-3-1">
+
+<div class="figure">
+<p><img src="./images/20200712194142.png" alt="20200712194142.png" />
+</p>
+</div>
+
+<p>
+hiearchical softmax
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ff0687" class="outline-4">
+<h4 id="org8ff0687"><span class="section-number-4">6.3.2</span> graphSAGE</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+采样,聚合,更新,预测.
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200712194510.png" alt="20200712194510.png" />
+</p>
+</div>
+
+<p>
+当无监督时:
+通过"让邻域内的节点相似度大于邻域之外的"构建出损失函数.
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200712194627.png" alt="20200712194627.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4c54a1" class="outline-3">
+<h3 id="orgc4c54a1"><span class="section-number-3">6.4</span> multi-aspect network embedding</h3>
+<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-org42117c3" class="outline-4">
+<h4 id="org42117c3"><span class="section-number-4">6.4.1</span> poly Deep Walk</h4>
+<div class="outline-text-4" id="text-6-4-1">
+
+<div class="figure">
+<p><img src="./images/20200712194912.png" alt="20200712194912.png" />
+</p>
+</div>
+
+<p>
+aspect的数量是一个给定的,但是每个aspect每个被采样的节点的概率是一个先验(即独立于数据而自己存在.)
+</p>
+
+
+
+<div class="figure">
+<p><img src="./images/20200712195527.png" alt="20200712195527.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8b2eb8e" class="outline-4">
+<h4 id="org8b2eb8e"><span class="section-number-4">6.4.2</span> asp2vec deep walk based</h4>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga6d7a8f" class="outline-2">
+<h2 id="orga6d7a8f"><span class="section-number-2">7</span> 逻辑 in Recommandation</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org7a7b98e" class="outline-3">
+<h3 id="org7a7b98e"><span class="section-number-3">7.1</span> collaborative Filtering</h3>
+<div class="outline-text-3" id="text-7-1">
+<ol class="org-ol">
+<li>查看 user 与 item 的相似度问题</li>
+
+<li>添加上下文信息的协同滤波</li>
+</ol>
+
+
+<p>
+问题：基于相似度匹配的协同滤波不如基于逻辑规则好用。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3192ac" class="outline-3">
+<h3 id="orga3192ac"><span class="section-number-3">7.2</span> 逻辑规则</h3>
+<div class="outline-text-3" id="text-7-2">
+
+<div class="figure">
+<p><img src="./images/20200719203315.png" alt="20200719203315.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb5cf61a" class="outline-3">
+<h3 id="orgb5cf61a"><span class="section-number-3">7.3</span> 使用NN演示逻辑关系</h3>
+</div>
+</div>
+
+<div id="outline-container-org214af30" class="outline-2">
+<h2 id="org214af30"><span class="section-number-2">8</span> 知识图谱在表示学习中的应用 张远鸣</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgba691ea" class="outline-3">
+<h3 id="orgba691ea"><span class="section-number-3">8.1</span> 应用</h3>
+<div class="outline-text-3" id="text-8-1">
+<ol class="org-ol">
+<li>搜索引擎</li>
+<li>智能问答</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org79ff5e0" class="outline-3">
+<h3 id="org79ff5e0"><span class="section-number-3">8.2</span> 知识图谱中实体的表示</h3>
+<div class="outline-text-3" id="text-8-2">
+<ol class="org-ol">
+<li>one-hot向量</li>
+<li>稠密向量</li>
+</ol>
+
+<p>
+类似于NLP中对词向量的表示，知识图谱由离散符号变成了对连续向量的操作。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2cba2a0" class="outline-3">
+<h3 id="org2cba2a0"><span class="section-number-3">8.3</span> 知识图谱表示学习的目标</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org97f5ea2" class="outline-4">
+<h4 id="org97f5ea2"><span class="section-number-4">8.3.1</span> 在知识图谱中进行间接预测</h4>
+<div class="outline-text-4" id="text-8-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org89e5c99"></a>基于翻译模型<br />
+<div class="outline-text-5" id="text-8-3-1-1">
+<p>
+1.基于相似度函数进行翻译；
+2.基于实体的关系表示其合理性；
+3.基于边来描述其关系
+</p>
+
+<p>
+基本思路：将实体看作是一个个的点，边看作是一个个的连接操作， 然后每个点都可以通过边这种平移操作移动到边所连接的另一个点。
+</p>
+
+<p>
+损失函数也是在这种基本思路下进行的。当然，损失函数还会考虑对负样本的处理。
+</p>
+
+<p>
+这里存在的问题：不同的节点可以通过相同的关系到达相同的另一个顶点。（我不觉得这是一个问题）所以，需要添加一个新的投影，通过这个投影来允许同一性。
+</p>
+
+<p>
+其他的想法：认为实体和关系不同处于同一空间。即不仅仅把关系理解成一种简单的平移变换，这种操作本质上就是把平移映射改变为经过了线性映射的平移变换。
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org7d94745" class="outline-4">
+<h4 id="org7d94745"><span class="section-number-4">8.3.2</span> 基于游走路径的知识图谱</h4>
+</div>
+
+<div id="outline-container-org4490c43" class="outline-4">
+<h4 id="org4490c43"><span class="section-number-4">8.3.3</span> 基于图卷积的知识图谱</h4>
+<div class="outline-text-4" id="text-8-3-3">
+<p>
+将同构图转变为异构图
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200726201311.png" alt="20200726201311.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgddfaa6a" class="outline-2">
+<h2 id="orgddfaa6a"><span class="section-number-2">9</span> Data Series Progresssive similarity search孙飞扬</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+完了，没听懂。完了完了。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+<div id="outline-container-orge3055dc" class="outline-2">
+<h2 id="orge3055dc"><span class="section-number-2">10</span> 图神经网络在知识图谱中的应用</h2>
+</div>
+
+<div id="outline-container-orgfdf9e9c" class="outline-2">
+<h2 id="orgfdf9e9c"><span class="section-number-2">11</span> 马尔可夫逻辑网络</h2>
+</div>
+
+
+
+
+
+
+
+<div id="outline-container-orgd017f0a" class="outline-2">
+<h2 id="orgd017f0a"><span class="section-number-2">12</span> [没讲]大规模分类场景下的数据挖掘 梁子</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-orgfd72f34" class="outline-3">
+<h3 id="orgfd72f34"><span class="section-number-3">12.1</span> 论文阅读</h3>
+<div class="outline-text-3" id="text-12-1">
+</div>
+<div id="outline-container-org547f582" class="outline-4">
+<h4 id="org547f582"><span class="section-number-4">12.1.1</span> Multilabel Classification by Hiearchical Partitioning and Data-dependent Grouping</h4>
+<div class="outline-text-4" id="text-12-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3c3c729"></a>abstract<br />
+<div class="outline-text-5" id="text-12-1-1-1">
+<p>
+要解决的问题：multilabel classification -&gt; 每一个数据都对应于一个较大的类别集合中的若干个集合，也就是说，要将数据映射为一个非常稀疏的二进制标签向量上。（data instance belongs to a small number of classes from a large set of classes. involve learning very sparse binary label vectors.）
+</p>
+
+<p>
+基于问题的这些特性进行解决：
+</p>
+<ol class="org-ol">
+<li>sparsity of label vectors.</li>
+<li>hiearchical structure of classes.</li>
+</ol>
+
+<p>
+尝试要去干的事： embed them in low dimensional space using label groupings.
+为了导出结果，需要把低维度的嵌入式label embedding还原为0-1的sparse vector. 方法是：obtain labels in the original space using an appropriately defined lifting.
+</p>
+
+<p>
+具体思路： 
+</p>
+<ol class="org-ol">
+<li>We first present a novel data-dependent grouping approach, where we use a group construction based on a low-rank Nonnegative Matrix Factorization (NMF) of the label matrix of training instances.</li>
+</ol>
+<p>
+使用非导航的矩阵银子分解得到一个grouping
+</p>
+
+<ol class="org-ol">
+<li>We then present a hierarchical partitioning approach that exploits the label hierarchy in large-scale problems to divide up the large label space and create smaller sub-problems, which can then be solved independently via the grouping approach.</li>
+</ol>
+<p>
+使用层次划分将一个大的标签空间切割为若干个小的标签空间.
+</p>
+
+<p>
+计算复杂度: 降低到了logarithmic runtime
+</p>
+</div>
+</li>
+
+<li><a id="orge5c19c4"></a>introduction<br />
+<div class="outline-text-5" id="text-12-1-1-2">
+<p>
+应用: recommandation system, bioinformatics, CV, NLP, music.
+</p>
+</div>
+</li>
+
+<li><a id="org6947d9a"></a>related works (目前解决这一问题的一些工作)<br />
+<div class="outline-text-5" id="text-12-1-1-3">
+<p>
+一共有四种方法,分别是:
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb900d11"></a>One versus All classifiers.<br />
+<div class="outline-text-6" id="text-12-1-1-3-1">
+<p>
+基本思路:为每一个label都设置一个0-1分类器来确定某个数据是否属于这一类.
+ 优点:预测精度比较高. 缺点:训练和运行的时间成本过高.
+ 妥协的方法: 对于每一个label,采用正样本+指数复杂度下的负样本采样训练.  -&gt; 类比于 softmax中当输出类过多时的解决思路.
+</p>
+</div>
+</li>
+
+<li><a id="org04770a2"></a>tree based classifiers.<br />
+<div class="outline-text-6" id="text-12-1-1-3-2">
+<p>
+优点: 当label存在一种自然上的层次结构时,使用这种方法效果很好.
+缺点:需要采用一些聚类方法对标签进行划分,这会增加算法的训练时间成本;对于树结构的每一个叶子节点(也就是层次的每一个分支)都需要训练一个分类器.
+</p>
+</div>
+</li>
+
+<li><a id="orgfec0ddb"></a>deep learning based classifiers<br />
+<div class="outline-text-6" id="text-12-1-1-3-3">
+<p>
+优点:效果好.
+缺点: 神经网络模型的规模过大(GB), 训练和使用的时间成本较高.
+</p>
+</div>
+</li>
+<li><a id="orgb43d6e7"></a>embedding based classifiers<br />
+<div class="outline-text-6" id="text-12-1-1-3-4">
+<p>
+想法: 将稀疏的标签向量映射到稠密的低维度空间.
+基于的假设:如果说label的向量构成的矩阵整体是low rank的,那么我们就可以用label之间的相关度correclation 来度量误差.
+但是上述假设并不是时时刻刻成立.一些常见的解决办法是: local embedding, negative sampling.
+相关的一些缺点: 在 recover the high-dimensional vectors, involving eigen-decompositions, matrix inversions, large optimization problems.
+一些为了解决这个问题所提出的方法: MLGT. 对于一个大的label集合,先随机生成m个subsets(这个subset被称作是group,本质上是一个向量,向量里有些地方是1,有些地方是0),之后,针对这m个group训练m个彼此独立的0-1分类器,这些分类器主要用来确定一个数据点是否从属于m个group中的某一个.当标签的稀疏度为k时,仅仅需要O(k^2logd)复杂度的group就可以实现不错的分类效果.并且这种方法被证实具有很小的hamming loss. 当然,随机生成group并不是一个好的选择.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb1bdec3"></a>contribution<br /></li>
+
+
+<li><a id="org15ae73b"></a>ourmethod<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgeae261e" class="outline-4">
+<h4 id="orgeae261e"><span class="section-number-4">12.1.2</span> Bonsai(盆景) - Diverse(多样化) and Shallow Trees for Extreme Multi-label Classification</h4>
+<div class="outline-text-4" id="text-12-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org64db684"></a>abstract<br />
+<div class="outline-text-5" id="text-12-1-2-1">
+<p>
+定义问题:和前面相似,被称作extreme multi-label classification.
+</p>
+
+<p>
+基本工作: Bonsai,  which generalizes the notion of label representation in XMC, and partitions the labels in the representation space to learn shallow trees.
+</p>
+
+<p>
+在label representation的生成上,可以依据于:1)input features, 2)label vectors, their co-occurrence with other labels;3)joint space.
+</p>
+
+<p>
+效果:精度高,训练快.
+</p>
+</div>
+</li>
+
+<li><a id="orga8d13ac"></a>introduction<br />
+<div class="outline-text-5" id="text-12-1-2-2">
+<p>
+和上面类似,重点强调了数据的后尾效应(也叫幂律效应).  a large fraction of labels are tail labels. those which have very few training instances that belong to them (also referred to as power-law, fat-tailed distribution and Zipf’s law).
+</p>
+
+<p>
+幂律效应一般可以表达为:
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200730190004.png" alt="20200730190004.png" />
+</p>
+</div>
+</div>
+</li>
+
+<li><a id="orgf99b0c1"></a>related works<br />
+<div class="outline-text-5" id="text-12-1-2-3">
+<p>
+与前面不一样的是,添加了一些额外的项
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge6a89b1"></a>one vs rest<br />
+<div class="outline-text-6" id="text-12-1-2-3-1">
+<p>
+同 OneVSAll.
+</p>
+</div>
+</li>
+
+<li><a id="org62889b6"></a>label embedding<br />
+<div class="outline-text-6" id="text-12-1-2-3-2">
+<p>
+这种方法在10~100数量级的标签上使用效果很好,但是当标签的数量进一步增加,误差就会变大.
+</p>
+
+<p>
+原因: 低秩的假设不再可行.
+</p>
+</div>
+</li>
+
+<li><a id="org1f47f4c"></a>基于深度学习的方法<br />
+<div class="outline-text-6" id="text-12-1-2-3-3">
+<p>
+However, their performance still remains sub-optimal compared to the methods discussed above which are based on bag-of-words feature representations. This is mainly due to the data scarcity in tail-labels which is substantially below the sample complexity required for deep learning methods to reach their peak performance.
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+
+
+<div id="outline-container-org5e3bc31" class="outline-4">
+<h4 id="org5e3bc31"><span class="section-number-4">12.1.3</span> Fast Training for Large-Scale One-versus-All Linear Classifiers using Tree-Structured Initialization</h4>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org5f5f1cb" class="outline-2">
+<h2 id="org5f5f1cb"><span class="section-number-2">13</span> 基于生物启发的局部敏感哈希 李润东学长</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+数据量大，查询慢
+</p>
+</div>
+
+<div id="outline-container-orgd61472b" class="outline-3">
+<h3 id="orgd61472b"><span class="section-number-3">13.1</span> 基于果蝇的hash</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+从短小紧凑的sketch映射为又长又稀疏的sketch
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee0d3ce" class="outline-3">
+<h3 id="orgee0d3ce"><span class="section-number-3">13.2</span> flyhash</h3>
+<div class="outline-text-3" id="text-13-2">
+<p>
+将随机映射矩阵转化为稀疏的映射矩阵
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200823194855.png" alt="20200823194855.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-org33061e9" class="outline-2">
+<h2 id="org33061e9"><span class="section-number-2">14</span> 知识蒸馏 雷润泽</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+fitnet
+</p>
+</div>
+
+<div id="outline-container-org81944c6" class="outline-3">
+<h3 id="org81944c6"><span class="section-number-3">14.1</span> fitNet</h3>
+</div>
+
+<div id="outline-container-org7a2dfd5" class="outline-3">
+<h3 id="org7a2dfd5"><span class="section-number-3">14.2</span> attention map learning</h3>
+<div class="outline-text-3" id="text-14-2">
+<p>
+亮点在于反向传播中新加的一项，那一项是对数据求偏导（而非过去对模型参数求偏导），从而测试模型对输入数据变化的灵敏性。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830195249.png" alt="20200830195249.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org89469e4" class="outline-3">
+<h3 id="org89469e4"><span class="section-number-3">14.3</span> rocket launching</h3>
+<div class="outline-text-3" id="text-14-3">
+<p>
+student model 分享teacher的特征提取部分，而把分类部分自己构造，然后再使用三个损失进行反向传播训练特征提取部分，两个损失函数进行反向传播训练分类环节。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830201517.png" alt="20200830201517.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4a072f1" class="outline-3">
+<h3 id="org4a072f1"><span class="section-number-3">14.4</span> FSP Matrix</h3>
+<div class="outline-text-3" id="text-14-4">
+<p>
+通过对同一神经网络上不同层的特征之间的联系进行固定，让Teacher与Student之间的上述联系相同。
+如下图中的损失函数所示。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830202029.png" alt="20200830202029.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org29e777a" class="outline-3">
+<h3 id="org29e777a"><span class="section-number-3">14.5</span> instance Relationship Graph</h3>
+<div class="outline-text-3" id="text-14-5">
+<p>
+对输入的batch data构建一张图，其中节点是数据样本（如图片），边是样本与样本之间的关系。希望教师和学生对数据之间关系的判断相同。
+<img src="./images/20200830202736.png" alt="20200830202736.png" />
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org827dcbd" class="outline-3">
+<h3 id="org827dcbd"><span class="section-number-3">14.6</span> 在线蒸馏 Deep Mutual Learning</h3>
+<div class="outline-text-3" id="text-14-6">
+<p>
+两个网络互相学习。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830203125.png" alt="20200830203125.png" />
+</p>
+</div>
+
+
+<p>
+多个同构的网络集成作为整体作为教师网络，然后用结果教授每一个网络。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830203249.png" alt="20200830203249.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6964ccc" class="outline-3">
+<h3 id="org6964ccc"><span class="section-number-3">14.7</span> self distillation</h3>
+<div class="outline-text-3" id="text-14-7">
+<p>
+自己指导自己。
+</p>
+
+<p>
+使用深层网络的特征作为一个监督信号去指导浅层网络的学习。
+</p>
+
+<p>
+通过这种方法，可以使用前N块神经网络来实现精度和压缩比率的trade off。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830203405.png" alt="20200830203405.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgca055d9" class="outline-3">
+<h3 id="orgca055d9"><span class="section-number-3">14.8</span> model quantization</h3>
+<div class="outline-text-3" id="text-14-8">
+<p>
+将knowledge distillation与quantization相结合。
+</p>
+
+
+<div class="figure">
+<p><img src="./images/20200830203542.png" alt="20200830203542.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org9db7a3f" class="outline-2">
+<h2 id="org9db7a3f"><span class="section-number-2">15</span> online learning 梁子</h2>
+<div class="outline-text-2" id="text-15">
+<ol class="org-ol">
+<li>讲的太快</li>
+<li>不清晰，含糊</li>
+
+<li>调查太浅；</li>
+<li>场景不清晰；</li>
+<li>不够深入；</li>
+<li>时间太短；（大报告至少一个小时）</li>
+</ol>
+
+<p>
+赵老师： online incremental learning？
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e83174" class="outline-2">
+<h2 id="org5e83174"><span class="section-number-2">16</span> 多跳下的开放域问答          ICLR2020 CMU+GOOGLE  张远鸣</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-orgd656319" class="outline-3">
+<h3 id="orgd656319"><span class="section-number-3">16.1</span> 知识图谱问答（KGQA）</h3>
+<div class="outline-text-3" id="text-16-1">
+<p>
+知识图谱构建很麻烦。
+知识图谱残缺则无法回答。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2946fa6" class="outline-3">
+<h3 id="org2946fa6"><span class="section-number-3">16.2</span> 相关工作</h3>
+<div class="outline-text-3" id="text-16-2">
+
+<div class="figure">
+<p><img src="./images/20200906203005.png" alt="20200906203005.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4609b5f" class="outline-3">
+<h3 id="org4609b5f"><span class="section-number-3">16.3</span> 本文贡献</h3>
+<div class="outline-text-3" id="text-16-3">
+<p>
+实现一种类似于知识图谱的多跳推理。
+</p>
+
+<p>
+工作流程：
+</p>
+<ol class="org-ol">
+<li>预训练；</li>
+<li>推理；</li>
+</ol>
+
+
+
+
+<div class="figure">
+<p><img src="./images/20200906204848.png" alt="20200906204848.png" />
+</p>
+</div>
+
+
+<p>
+意图：
+</p>
+<ol class="org-ol">
+<li>实体可以作为一种媒介，在多篇文档之间跳转；</li>
+<li>不同文档中的相同实体（enity）具有不同的名字（mension）；</li>
+<li>先找到enity的所有mension，然后再从这些mension里找到与问题相关的那些东西</li>
+<li>提取未出现的实体为潜在实体？</li>
+</ol>
+
+<p>
+共值消解： 将相同实体的不同名称的表达统一。
+</p>
+
+
+<p>
+<img src="./images/20200906203634.png" alt="20200906203634.png" />
+相关函数用来过滤相关的话题
+</p>
+
+<p>
+原有：从问题中，一步步搜索，最终找到答案；
+改进： 从用户的问题上抽取所有实体，然后针对文本表进行查询，然后生成一个新的问题。然后循环，一步步得到答案。
+</p>
+
+<p>
+张朔学长：问句中的两个实体是“与”的关系，但是没有任何地方体现。可以加入这种对逻辑关系的判定的部分去改进。
+方向：（问题分解）
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org0d56c98" class="outline-2">
+<h2 id="org0d56c98"><span class="section-number-2">17</span> adversarial Attack in Graph data.</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-orgf5f4346" class="outline-3">
+<h3 id="orgf5f4346"><span class="section-number-3">17.1</span> motivation</h3>
+<div class="outline-text-3" id="text-17-1">
+<p>
+In graph data, some node can 逃避 anomaly detection with add or delete some edges.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orge5d0267" class="outline-3">
+<h3 id="orge5d0267"><span class="section-number-3">17.2</span> challenge</h3>
+<div class="outline-text-3" id="text-17-2">
+<ol class="org-ol">
+<li>图一般可以表示为一个邻接矩阵的形式，本质上可以表示为一个离散的空间向量。这不适合于神经网络的使用。</li>
+<li>如何去定义“不易察觉的变化”-》针对图数据；</li>
+<li>怎么样干吗干吗干吗；</li>
+<li>可拓展性非常大，究竟在什么尺度上去考虑这个问题</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgfb536fc" class="outline-3">
+<h3 id="orgfb536fc"><span class="section-number-3">17.3</span> attack strategy</h3>
+<div class="outline-text-3" id="text-17-3">
+
+<div class="figure">
+<p><img src="./images/20200913194146.png" alt="20200913194146.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9251722" class="outline-3">
+<h3 id="org9251722"><span class="section-number-3">17.4</span> attack stage</h3>
+<div class="outline-text-3" id="text-17-4">
+
+<div class="figure">
+<p><img src="./images/20200913194344.png" alt="20200913194344.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbdf4539" class="outline-3">
+<h3 id="orgbdf4539"><span class="section-number-3">17.5</span> assumption of attackers</h3>
+<div class="outline-text-3" id="text-17-5">
+</div>
+<div id="outline-container-org90f811f" class="outline-4">
+<h4 id="org90f811f"><span class="section-number-4">17.5.1</span> 观察者对模型的了解程度</h4>
+<div class="outline-text-4" id="text-17-5-1">
+
+<div class="figure">
+<p><img src="./images/20200913194501.png" alt="20200913194501.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0ac5c0f" class="outline-4">
+<h4 id="org0ac5c0f"><span class="section-number-4">17.5.2</span> 观察者对数据集的了解程度</h4>
+<div class="outline-text-4" id="text-17-5-2">
+
+<div class="figure">
+<p><img src="./images/20200913194625.png" alt="20200913194625.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org7b72660" class="outline-3">
+<h3 id="org7b72660"><span class="section-number-3">17.6</span> application</h3>
+<div class="outline-text-3" id="text-17-6">
+<p>
+关于图神经网络的各种任务。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orge8b8017" class="outline-3">
+<h3 id="orge8b8017"><span class="section-number-3">17.7</span> some papers</h3>
+<div class="outline-text-3" id="text-17-7">
+</div>
+<div id="outline-container-org0acf429" class="outline-4">
+<h4 id="org0acf429"><span class="section-number-4">17.7.1</span> node classification KDD2018</h4>
+<div class="outline-text-4" id="text-17-7-1">
+
+<div class="figure">
+<p><img src="./images/20200913195054.png" alt="20200913195054.png" />
+</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="./images/20200913195653.png" alt="20200913195653.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfbe3a43" class="outline-4">
+<h4 id="orgfbe3a43"><span class="section-number-4">17.7.2</span> ICML 2018</h4>
+<div class="outline-text-4" id="text-17-7-2">
+
+<div class="figure">
+<p><img src="./images/20200913200025.png" alt="20200913200025.png" />
+</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="./images/20200913200152.png" alt="20200913200152.png" />
+</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="./images/20200913200607.png" alt="20200913200607.png" />
+</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="./images/20200913200727.png" alt="20200913200727.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4db21e0" class="outline-4">
+<h4 id="org4db21e0"><span class="section-number-4">17.7.3</span> community detection arxiv 2019</h4>
+<div class="outline-text-4" id="text-17-7-3">
+
+<div class="figure">
+<p><img src="./images/20200913201331.png" alt="20200913201331.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./images/20200913201818.png" alt="20200913201818.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbea7f3e" class="outline-3">
+<h3 id="orgbea7f3e"><span class="section-number-3">17.8</span> future</h3>
+<div class="outline-text-3" id="text-17-8">
+
+<div class="figure">
+<p><img src="./images/20200913201957.png" alt="20200913201957.png" />
+</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2020-06-28 周日 00:00</p>
 <p class="author">Author: 梁子</p>
-<p class="date">Created: 2020-06-28 周日 19:55</p>
+<p class="date">Created: 2020-09-13 周日 20:31</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

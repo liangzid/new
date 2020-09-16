@@ -440,3 +440,343 @@ aspect的数量是一个给定的,但是每个aspect每个被采样的节点的�
 
 
 
+
+
+* 图神经网络在知识图谱中的应用
+
+* 马尔可夫逻辑网络
+
+
+
+
+
+
+
+* [没讲]大规模分类场景下的数据挖掘 梁子
+
+** 论文阅读
+
+*** Multilabel Classification by Hiearchical Partitioning and Data-dependent Grouping
+
+**** abstract
+
+ 要解决的问题：multilabel classification -> 每一个数据都对应于一个较大的类别集合中的若干个集合，也就是说，要将数据映射为一个非常稀疏的二进制标签向量上。（data instance belongs to a small number of classes from a large set of classes. involve learning very sparse binary label vectors.）
+
+ 基于问题的这些特性进行解决：
+ 1. sparsity of label vectors.
+ 2. hiearchical structure of classes.
+
+ 尝试要去干的事： embed them in low dimensional space using label groupings.
+ 为了导出结果，需要把低维度的嵌入式label embedding还原为0-1的sparse vector. 方法是：obtain labels in the original space using an appropriately defined lifting.
+
+ 具体思路： 
+ 1. We first present a novel data-dependent grouping approach, where we use a group construction based on a low-rank Nonnegative Matrix Factorization (NMF) of the label matrix of training instances.
+ 使用非导航的矩阵银子分解得到一个grouping
+
+ 2. We then present a hierarchical partitioning approach that exploits the label hierarchy in large-scale problems to divide up the large label space and create smaller sub-problems, which can then be solved independently via the grouping approach.
+ 使用层次划分将一个大的标签空间切割为若干个小的标签空间.
+
+ 计算复杂度: 降低到了logarithmic runtime
+
+**** introduction
+
+应用: recommandation system, bioinformatics, CV, NLP, music.
+
+**** related works (目前解决这一问题的一些工作)
+
+一共有四种方法,分别是:
+
+***** One versus All classifiers. 
+基本思路:为每一个label都设置一个0-1分类器来确定某个数据是否属于这一类.
+ 优点:预测精度比较高. 缺点:训练和运行的时间成本过高.
+ 妥协的方法: 对于每一个label,采用正样本+指数复杂度下的负样本采样训练.  -> 类比于 softmax中当输出类过多时的解决思路.
+
+***** tree based classifiers.
+优点: 当label存在一种自然上的层次结构时,使用这种方法效果很好.
+缺点:需要采用一些聚类方法对标签进行划分,这会增加算法的训练时间成本;对于树结构的每一个叶子节点(也就是层次的每一个分支)都需要训练一个分类器.
+
+***** deep learning based classifiers
+优点:效果好.
+缺点: 神经网络模型的规模过大(GB), 训练和使用的时间成本较高.
+***** embedding based classifiers
+想法: 将稀疏的标签向量映射到稠密的低维度空间.
+基于的假设:如果说label的向量构成的矩阵整体是low rank的,那么我们就可以用label之间的相关度correclation 来度量误差.
+但是上述假设并不是时时刻刻成立.一些常见的解决办法是: local embedding, negative sampling.
+相关的一些缺点: 在 recover the high-dimensional vectors, involving eigen-decompositions, matrix inversions, large optimization problems.
+一些为了解决这个问题所提出的方法: MLGT. 对于一个大的label集合,先随机生成m个subsets(这个subset被称作是group,本质上是一个向量,向量里有些地方是1,有些地方是0),之后,针对这m个group训练m个彼此独立的0-1分类器,这些分类器主要用来确定一个数据点是否从属于m个group中的某一个.当标签的稀疏度为k时,仅仅需要O(k^2logd)复杂度的group就可以实现不错的分类效果.并且这种方法被证实具有很小的hamming loss. 当然,随机生成group并不是一个好的选择.
+**** contribution 
+
+
+**** ourmethod
+
+*** Bonsai(盆景) - Diverse(多样化) and Shallow Trees for Extreme Multi-label Classification
+
+**** abstract
+定义问题:和前面相似,被称作extreme multi-label classification.
+
+基本工作: Bonsai,  which generalizes the notion of label representation in XMC, and partitions the labels in the representation space to learn shallow trees.
+
+在label representation的生成上,可以依据于:1)input features, 2)label vectors, their co-occurrence with other labels;3)joint space.
+
+效果:精度高,训练快.
+
+**** introduction
+
+和上面类似,重点强调了数据的后尾效应(也叫幂律效应).  a large fraction of labels are tail labels. those which have very few training instances that belong to them (also referred to as power-law, fat-tailed distribution and Zipf’s law).
+
+幂律效应一般可以表达为:
+
+[[file:./images/20200730190004.png]]
+
+**** related works
+
+与前面不一样的是,添加了一些额外的项
+
+***** one vs rest
+ 同 OneVSAll.
+
+***** label embedding
+这种方法在10~100数量级的标签上使用效果很好,但是当标签的数量进一步增加,误差就会变大.
+
+原因: 低秩的假设不再可行.
+
+***** 基于深度学习的方法
+
+However, their performance still remains sub-optimal compared to the methods discussed above which are based on bag-of-words feature representations. This is mainly due to the data scarcity in tail-labels which is substantially below the sample complexity required for deep learning methods to reach their peak performance.
+
+
+
+*** Fast Training for Large-Scale One-versus-All Linear Classifiers using Tree-Structured Initialization
+
+
+
+
+* 基于生物启发的局部敏感哈希 李润东学长
+
+数据量大，查询慢
+
+** 基于果蝇的hash
+从短小紧凑的sketch映射为又长又稀疏的sketch
+
+** flyhash
+将随机映射矩阵转化为稀疏的映射矩阵
+
+[[file:./images/20200823194855.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+* 知识蒸馏 雷润泽
+
+fitnet
+
+** fitNet
+
+** attention map learning
+
+亮点在于反向传播中新加的一项，那一项是对数据求偏导（而非过去对模型参数求偏导），从而测试模型对输入数据变化的灵敏性。
+
+ [[file:./images/20200830195249.png]]
+
+** rocket launching
+student model 分享teacher的特征提取部分，而把分类部分自己构造，然后再使用三个损失进行反向传播训练特征提取部分，两个损失函数进行反向传播训练分类环节。
+
+[[file:./images/20200830201517.png]]
+
+** FSP Matrix
+
+通过对同一神经网络上不同层的特征之间的联系进行固定，让Teacher与Student之间的上述联系相同。
+如下图中的损失函数所示。
+
+[[file:./images/20200830202029.png]]
+
+
+** instance Relationship Graph
+
+对输入的batch data构建一张图，其中节点是数据样本（如图片），边是样本与样本之间的关系。希望教师和学生对数据之间关系的判断相同。
+[[file:./images/20200830202736.png]]
+
+
+** 在线蒸馏 Deep Mutual Learning
+
+两个网络互相学习。
+
+[[file:./images/20200830203125.png]]
+
+
+多个同构的网络集成作为整体作为教师网络，然后用结果教授每一个网络。
+
+[[file:./images/20200830203249.png]]
+
+** self distillation
+
+自己指导自己。
+
+使用深层网络的特征作为一个监督信号去指导浅层网络的学习。
+
+通过这种方法，可以使用前N块神经网络来实现精度和压缩比率的trade off。
+
+[[file:./images/20200830203405.png]]
+
+** model quantization
+将knowledge distillation与quantization相结合。
+
+[[file:./images/20200830203542.png]]
+
+
+
+* online learning 梁子
+1. 讲的太快
+2. 不清晰，含糊
+
+1. 调查太浅；
+2. 场景不清晰；
+3. 不够深入；
+4. 时间太短；（大报告至少一个小时）
+
+赵老师： online incremental learning？
+
+* 多跳下的开放域问答          ICLR2020 CMU+GOOGLE  张远鸣
+
+** 知识图谱问答（KGQA）
+知识图谱构建很麻烦。
+知识图谱残缺则无法回答。
+
+** 相关工作
+
+[[file:./images/20200906203005.png]]
+
+
+** 本文贡献
+
+实现一种类似于知识图谱的多跳推理。
+
+工作流程：
+1. 预训练；
+2. 推理；
+
+
+
+[[file:./images/20200906204848.png]]
+
+
+意图：
+1. 实体可以作为一种媒介，在多篇文档之间跳转；
+2. 不同文档中的相同实体（enity）具有不同的名字（mension）；
+3. 先找到enity的所有mension，然后再从这些mension里找到与问题相关的那些东西
+4. 提取未出现的实体为潜在实体？
+
+共值消解： 将相同实体的不同名称的表达统一。
+
+
+[[file:./images/20200906203634.png]]
+相关函数用来过滤相关的话题
+
+原有：从问题中，一步步搜索，最终找到答案；
+改进： 从用户的问题上抽取所有实体，然后针对文本表进行查询，然后生成一个新的问题。然后循环，一步步得到答案。
+
+张朔学长：问句中的两个实体是“与”的关系，但是没有任何地方体现。可以加入这种对逻辑关系的判定的部分去改进。
+方向：（问题分解）
+
+
+
+
+* adversarial Attack in Graph data.
+
+** motivation
+
+In graph data, some node can 逃避 anomaly detection with add or delete some edges.
+
+
+
+** challenge
+
+
+1. 图一般可以表示为一个邻接矩阵的形式，本质上可以表示为一个离散的空间向量。这不适合于神经网络的使用。
+2. 如何去定义“不易察觉的变化”-》针对图数据；
+3. 怎么样干吗干吗干吗；
+4. 可拓展性非常大，究竟在什么尺度上去考虑这个问题
+
+
+** attack strategy
+
+[[file:./images/20200913194146.png]]
+
+** attack stage
+
+[[file:./images/20200913194344.png]]
+
+** assumption of attackers
+
+*** 观察者对模型的了解程度
+
+[[file:./images/20200913194501.png]]
+
+*** 观察者对数据集的了解程度
+
+[[file:./images/20200913194625.png]]
+
+
+** application
+关于图神经网络的各种任务。
+
+
+** some papers
+
+*** node classification KDD2018
+
+[[file:./images/20200913195054.png]]
+
+
+[[file:./images/20200913195653.png]]
+
+
+*** ICML 2018
+
+[[file:./images/20200913200025.png]]
+
+
+[[file:./images/20200913200152.png]]
+
+
+[[file:./images/20200913200607.png]]
+
+
+[[file:./images/20200913200727.png]]
+
+*** community detection arxiv 2019
+
+[[file:./images/20200913201331.png]]
+
+[[file:./images/20200913201818.png]]
+
+** future
+
+[[file:./images/20200913201957.png]]
+
+
+攻击的问题是关于图神经网络的鲁棒性问题的一个讨论。
+
+关于文本的攻击问题？？
+
+* 某人 Jointly Embedding KD and Logical Rules ，EMNLP2016，中科院
+
+** introduction
+
+[[file:./images/20200913204403.png]]
+
+
+
+
+
+
+
+
